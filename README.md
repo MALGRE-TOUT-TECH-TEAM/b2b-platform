@@ -19,7 +19,7 @@
 </pre>
 
 <pre>
-mv .env.example .env 
+cp .env.example .env 
 php artisan key:generate
 </pre>
 
