@@ -20,7 +20,7 @@
 
 <pre>
 cp .env.example .env 
-php artisan key:generate
+sail php artisan key:generate
 </pre>
 
 ## About Laravel
