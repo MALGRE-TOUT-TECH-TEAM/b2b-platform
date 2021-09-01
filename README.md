@@ -7,6 +7,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## NAVIGATE TO YOUR PROJECT AFTER CLONING AND PASTE THIS LINE OF CODE INTO YOUR TERMINAL TO DOWNLOAD REQUIRED DEPENDENCIES
+
 <pre>
  docker run --rm \
     -u "$(id -u):$(id -g)" \
