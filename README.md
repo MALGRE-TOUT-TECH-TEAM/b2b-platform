@@ -8,8 +8,10 @@
 </p>
 
 ## After Cloning
-<p>Navigate to the project repository and paste the below line of code into your terminal:</p>
-<pre>
+<p>Follow these steps PRECISELY in order after cloning, to avoid any errors:</p>
+<ol>
+    <li> <p>copy and paste the code below into windows terminal (will install sail):</p>
+    <pre>
  docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v $(pwd):/opt \
@@ -17,11 +19,10 @@
     laravelsail/php80-composer:latest \
     composer install --ignore-platform-reqs
 </pre>
-
-<pre>
-cp .env.example .env 
-sail php artisan key:generate
-</pre>
+    </li>
+    <li><p>Open the project in your code editor, and rename the .env.example file to .env</p></li>
+    <li><p>Change the value of "DB_HOST" to have "mysql" instead of localhost ip.</p></li>
+</ol>
 
 ## Deleting Project
 <p>If you run into problems trying to delete the project (due to corrupted files), you can run the following command, after navigating to the folder where your project is located:</p>
