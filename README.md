@@ -21,7 +21,24 @@
 </pre>
     </li>
     <li><p>Open the project in your code editor, and rename the .env.example file to .env</p></li>
-    <li><p>Change the value of "DB_HOST" to have "mysql" instead of localhost ip.</p></li>
+    <li><p>Replace 
+        <pre>
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=b2b_annonce_platform
+    DB_USERNAME=root	
+    DB_PASSWORD=
+    </pre>
+    with
+        <pre>
+    DB_CONNECTION=mysql
+    DB_HOST=mysql
+    DB_PORT=3306
+    DB_DATABASE=b2b_annonce_platform
+    DB_USERNAME=sail	
+    DB_PASSWORD=password</pre>
+    </p></li>
     <li><p>Change directory to the project folder and run: <pre>sail up -d</pre></p></li>
     <li><p>Now navigate to localhost in the browser, and generate the app encryption key.</p></li>
     <li><p>Lastly, migrate database tables into your databse by writing: <pre>sail artisan migrate</pre></p></li>
