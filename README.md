@@ -23,6 +23,10 @@ cp .env.example .env
 sail php artisan key:generate
 </pre>
 
+## Deleting Project
+<p>If you run into problems trying to delete the project (due to corrupted files), you can run the following command, after navigating to the folder where your project is located:</p>
+<pre>rm -rf folder_name</pre>
+
 ## About Laravel
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
