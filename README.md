@@ -10,7 +10,7 @@
 ## After Cloning
 <p>Follow these steps PRECISELY in order after cloning, to avoid any errors:</p>
 <ol>
-    <li> <p>copy and paste the code below into windows terminal (will install sail):</p>
+    <li><p>Copy and paste the code below into windows terminal (will install sail):</p>
     <pre>
  docker run --rm \
     -u "$(id -u):$(id -g)" \
