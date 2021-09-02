@@ -28,8 +28,7 @@
     DB_PORT=3306
     DB_DATABASE=b2b_annonce_platform
     DB_USERNAME=root	
-    DB_PASSWORD=
-    </pre>
+    DB_PASSWORD=</pre>
     with
         <pre>
     DB_CONNECTION=mysql
