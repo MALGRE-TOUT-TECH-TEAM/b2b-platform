@@ -6,23 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}"> <!-- public/css/app.css -->
 </head>
-
 <body>
-    <header class="container">
-        <nav class="navbar navbar-dark bg-dark">
-            <ul class="nav">
+    <header>
+        <nav class="bg-dark p-2">
+            <ul class="nav justify-content-center">
                 <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="analytics" class="nav-link">Analytics</a></li>
             </ul>
         </nav>
     </header>
     <main class="container">
         @yield('content')
     </main>
+    <footer class="container bg-dark">Copyright Malgré Tout 2021-2021</footer>
 </body>
-
 </html>
