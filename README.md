@@ -20,7 +20,7 @@
     composer install --ignore-platform-reqs
 </pre>
     </li>
-    <li><p>Open the project in your code editor, and rename the .env.example file to .env. You can also copy paste following line, to generate the .env file for you:</p>
+    <li><p>Open the project in your code editor, and rename the .env.example file to .env. You can also write the following line, to generate the .env file for you:</p>
         <pre>cp .env.example .env</pre>
     </li>
     <li>
