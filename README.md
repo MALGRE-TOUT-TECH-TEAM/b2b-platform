@@ -7,9 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## After Cloning
+## Setup
 <p>Follow these steps PRECISELY in order after cloning to avoid any errors:</p>
 <ol>
+    <li><p>Clone the project to your preferred folder:</p>
+        <pre>git clone https://github.com/MALGRE-TOUT-TECH-TEAM/b2b-platform.git</pre>
+    </li>
+    <li>
+        <p>Navigate to your newly created project:</p>
+        <pre>cd b2b-platform</pre>
+        <p>And open visual studio code:</p>
+        <pre>code .</pre>
+    </li>
     <li><p>Copy and paste the code below into windows terminal (will install sail and other dependencies):</p>
     <pre>
  docker run --rm \
