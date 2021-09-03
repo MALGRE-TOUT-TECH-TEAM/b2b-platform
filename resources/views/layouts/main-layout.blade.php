@@ -24,9 +24,9 @@
         <div class="row">
             <section id="sidebar" class="col-md-3">
                 <nav>
-                    <ul class="nav flex-column">
-                        <li class="nav-item"><a href="/" class="nav-link">Dashboard</a></li>
-                        <li class="nav-item"><a href="#annoncer" class="nav-link">Annoncer</a></li>
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item"><a href="/" class="nav-link {{ (request()->is('/')) ? 'active' : '' }}">Dashboard</a></li>
+                        <li class="nav-item"><a href="#annoncer" class="nav-link {{ (request()->is('#annoncer')) ? 'active' : '' }}">Annoncer</a></li>
                         <li class="nav-item"><a href="#kampagner" class="nav-link">Kampagner</a></li>
                         <li class="nav-item"><a href="#profil" class="nav-link">Profil</a></li>
                         <hr>
