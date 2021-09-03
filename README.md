@@ -39,7 +39,9 @@
     DB_PASSWORD=password</pre>
     </p></li>
     <li><p>Change directory to the project folder and run: <pre>sail up -d</pre></p></li>
-    <li><p>Now navigate to localhost in the browser, and generate the app encryption key.</p></li>
+    <li><p>Now navigate to localhost in the browser, and generate the app encryption key, either by clicking the button or writing:</p>
+    <pre>sail artisan key:generate</pre>
+</li>
     <li><p>Lastly, migrate database tables into your databse by writing: <pre>sail artisan migrate</pre></p></li>
 </ol>
 
