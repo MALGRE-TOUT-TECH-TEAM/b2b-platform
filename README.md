@@ -50,7 +50,7 @@
     DB_USERNAME=sail	
     DB_PASSWORD=password</pre>
     </li>
-    <li><p>Change directory to the project folder and run:</p> <pre>sail up -d</pre></li>
+    <li><p>Run the project:</p> <pre>sail up -d</pre></li>
     <li><p>Now navigate to localhost in the browser, and generate the app encryption key, either by clicking the button or writing:</p>
     <pre>sail artisan key:generate</pre>
 </li>
