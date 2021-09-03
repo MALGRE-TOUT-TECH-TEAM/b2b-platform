@@ -14,30 +14,31 @@
         <nav class="p-2">
             <ul class="nav justify-content-center">
                 <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="analytics" class="nav-link">Analytics</a></li>
+                <li class="nav-item"><a href="testing" class="nav-link">Testing</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
-        <section id="sidebar">
-            <nav>
-                <ul class="nav flex-column">
-                   <li class="nav-item"><a href="/" class="nav-link">Dashboard</a></li>
-                   <li class="nav-item"><a href="#annoncer" class="nav-link">Annoncer</a></li>
-                   <li class="nav-item"><a href="#kampagner" class="nav-link">Kampagner</a></li>
-                   <li class="nav-item"><a href="#profil" class="nav-link">Profil</a></li>
-                   <hr>
-                   <li class="nav-item"><a href="#videoer" class="nav-link">Videoer<sub class="text-pink">kommer snart</sub></a></li>
-                   <li class="nav-item"><a href="#addons" class="nav-link">Addons</a></li>
-                   <li class="nav-item"><a href="#ring" class="nav-link">+45 7027 4300</a></li>
-                </ul>
-            </nav>
-        </section>
-        <section id="content">
-            @yield('content')
-        </section>
+        <div class="row">
+            <section id="sidebar" class="col-md-3">
+                <nav>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="/" class="nav-link">Dashboard</a></li>
+                        <li class="nav-item"><a href="#annoncer" class="nav-link">Annoncer</a></li>
+                        <li class="nav-item"><a href="#kampagner" class="nav-link">Kampagner</a></li>
+                        <li class="nav-item"><a href="#profil" class="nav-link">Profil</a></li>
+                        <hr>
+                        <li class="nav-item"><a href="#videoer" class="nav-link">Videoer<sub class="text-pink">kommer snart</sub></a></li>
+                        <li class="nav-item"><a href="#addons" class="nav-link">Addons</a></li>
+                        <li class="nav-item"><a href="#ring" class="nav-link">+45 7027 4300</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="content" class="col-md-9">
+                @yield('content')
+            </section>
+        </div>
     </main>
     <footer class="container d-flex justify-content-center">Copyright Malgré Tout 2021-2021</footer>
 </body>

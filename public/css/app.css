@@ -21,3 +21,9 @@ body{
 .nav-link:hover{
     color:var(--pink);
 }
+
+/* #sidebar{
+    position: absolute;
+    top:0;
+    left:0;
+} */
