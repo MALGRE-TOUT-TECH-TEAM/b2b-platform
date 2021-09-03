@@ -21,7 +21,8 @@
 </pre>
     </li>
     <li><p>Open the project in your code editor, and rename the .env.example file to .env</p></li>
-    <li>Replace 
+    <li>
+        <p>Replace</p> 
         <pre>
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -29,7 +30,7 @@
     DB_DATABASE=b2b_annonce_platform
     DB_USERNAME=root	
     DB_PASSWORD=</pre>
-    with
+        <p>with</p>
         <pre>
     DB_CONNECTION=mysql
     DB_HOST=mysql
@@ -38,7 +39,7 @@
     DB_USERNAME=sail	
     DB_PASSWORD=password</pre>
     </li>
-    <li>Change directory to the project folder and run: <pre>sail up -d</pre></li>
+    <li><p>Change directory to the project folder and run:</p> <pre>sail up -d</pre></li>
     <li><p>Now navigate to localhost in the browser, and generate the app encryption key, either by clicking the button or writing:</p>
     <pre>sail artisan key:generate</pre>
 </li>
