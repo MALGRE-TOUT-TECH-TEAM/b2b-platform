@@ -1,17 +1,23 @@
+:root{
+    --pink: #db8679;
+    --black: #000000;
+    --gray: #8e8e8e;
+    --white:#f5f6fa;
+}
+
 body{
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(7,7,71,1) 35%, rgba(0,212,255,1) 100%);
-    background-repeat: no-repeat;
+    background: var(--white);
     background-size: cover;
     min-height: 100vh;
-    color:cornsilk;
     margin:0;
     padding:0;
 }
-
+.text-pink{
+    color:var(--pink);
+}
 .nav-link{
-    color:white;
+    color:var(--black);
 }
 .nav-link:hover{
-    color:salmon;
+    color:var(--pink);
 }

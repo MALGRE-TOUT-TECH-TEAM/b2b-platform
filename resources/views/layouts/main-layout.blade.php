@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="bg-dark p-2">
+        <nav class="p-2">
             <ul class="nav justify-content-center">
                 <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about" class="nav-link">About</a></li>
@@ -19,9 +19,26 @@
             </ul>
         </nav>
     </header>
+
     <main class="container">
-        @yield('content')
+        <section id="sidebar">
+            <nav>
+                <ul class="nav flex-column">
+                   <li class="nav-item"><a href="/" class="nav-link">Dashboard</a></li>
+                   <li class="nav-item"><a href="#annoncer" class="nav-link">Annoncer</a></li>
+                   <li class="nav-item"><a href="#kampagner" class="nav-link">Kampagner</a></li>
+                   <li class="nav-item"><a href="#profil" class="nav-link">Profil</a></li>
+                   <hr>
+                   <li class="nav-item"><a href="#videoer" class="nav-link">Videoer<sub class="text-pink">kommer snart</sub></a></li>
+                   <li class="nav-item"><a href="#addons" class="nav-link">Addons</a></li>
+                   <li class="nav-item"><a href="#ring" class="nav-link">+45 7027 4300</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="content">
+            @yield('content')
+        </section>
     </main>
-    <footer class="container bg-dark">Copyright Malgré Tout 2021-2021</footer>
+    <footer class="container d-flex justify-content-center">Copyright Malgré Tout 2021-2021</footer>
 </body>
 </html>
