@@ -27,4 +27,4 @@ jobs:
        laravelsail/php80-composer:latest \
        composer install --ignore-platform-reqs
     - name: Generate key
-      run: sail artisan key:generate
+      run: php artisan key:generate
