@@ -8,9 +8,9 @@
 </p>
 
 ## After Cloning
-<p>Follow these steps PRECISELY in order after cloning, to avoid any errors:</p>
+<p>Follow these steps PRECISELY in order after cloning to avoid any errors:</p>
 <ol>
-    <li><p>Copy and paste the code below into windows terminal (will install sail):</p>
+    <li><p>Copy and paste the code below into windows terminal (will install sail and other dependencies):</p>
     <pre>
  docker run --rm \
     -u "$(id -u):$(id -g)" \
@@ -21,7 +21,7 @@
 </pre>
     </li>
     <li><p>Open the project in your code editor, and rename the .env.example file to .env</p></li>
-    <li><p>Replace 
+    <li>Replace 
         <pre>
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -37,8 +37,8 @@
     DB_DATABASE=b2b_annonce_platform
     DB_USERNAME=sail	
     DB_PASSWORD=password</pre>
-    </p></li>
-    <li><p>Change directory to the project folder and run: <pre>sail up -d</pre></p></li>
+    </li>
+    <li>Change directory to the project folder and run: <pre>sail up -d</pre></li>
     <li><p>Now navigate to localhost in the browser, and generate the app encryption key, either by clicking the button or writing:</p>
     <pre>sail artisan key:generate</pre>
 </li>
