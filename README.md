@@ -61,6 +61,12 @@
 <p>If you run into problems trying to delete the project (due to corrupted files), you can run the following command, after navigating to the folder where your project is located:</p>
 <pre>rm -rf folder_name</pre>
 
+# Policies
+
+<p>The main branch in this repository is <strong>PROTECTED</strong>. You can only merge by making a new branch and then issuing a pull requests. Pull requests has to be approved by two other code contributors.</p>
+<p>Branches should have the following naming convention:</p>
+<pre>name_of_functionality-name_of_branch_creator</pre>
+
 ## About Laravel
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
