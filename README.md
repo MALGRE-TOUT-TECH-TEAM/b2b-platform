@@ -78,7 +78,7 @@ sail artisan cache:clear</pre>
     </li>
 </ol>
 
-# Deleting Project
+### Deleting Project
 <p>If you run into problems trying to delete the project (due to corrupted files), you can run the following command, after navigating to the folder where your project is located:</p>
 <pre>rm -rf folder_name</pre>
 
@@ -90,20 +90,24 @@ sail artisan cache:clear</pre>
 ## Useful Commands
 Here is a list of useful commands, that can or have been used in this project.
 
-# Migrations
+### Migrations
 <pre>
 sail artisan migrate:reset //rolls back all application migrations
 sail artisan migrate:refresh //rolls back all migrations and execute the migrate command. Its like recreating your entire database.
 sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> again</pre>
 
-# Scaffolding
+### Scaffolding
 <pre>
-sail artisan make:model ModelName //creates a new model class with the name "ModelName". Can be appended with -mfsc to generate a corresponding migration, factory, seeder and controller class.
-sail artisan make:controller TestController //creates a new controller class with the name "TestController". All controller classes have to be suffixed with "Controller".
-sail artisan make:migration create_test_table //creates a new migration class named "create_test_table". Migrations are used to generate database tables.
-sail artisan make:seeder DataSeeder //creates a new seeder class named "DataSeeder". Seeder classes are used to populate the database with data. For example, we are using a seeder to auto generate dummy data.</pre>
+<p>Create a new model class with the name "ModelName". Can be appended with -mfsc to generate a corresponding migration, factory, seeder and controller class:</p>
+sail artisan make:model ModelName -mfsc | --all
+<p>Create a new controller class with the name "TestController". All controller classes have to be suffixed with "Controller".</p>
+sail artisan make:controller TestController 
+<p>Create a new migration class named "create_test_table". Migrations are used to generate database tables.</p>
+sail artisan make:migration create_test_table
+<p>Create a new seeder class named "DataSeeder". Seeder classes are used to populate the database with data. For example, we are using a seeder to auto generate dummy data.</p>
+sail artisan make:seeder DataSeeder </pre>
 
-# UI
+### UI
 <p>To generate laravel UI components, you first have to download the library:</p>
 <pre>sail composer require Laravel/ui</pre>
 <p>In our project, we have used to the library to generate an authentication page with logic:</p>
