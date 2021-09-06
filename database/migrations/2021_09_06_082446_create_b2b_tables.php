@@ -14,37 +14,6 @@ class CreateB2bTables extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->id();
-            $table->string("name", 191);
-            $table->string("guard_name", 191);
-            $table->timestamps();
-        });
-
-        Schema::create('permissions', function (Blueprint $table) {
-            $table->id();
-            $table->string("name", 191);
-            $table->string("guard_name", 191);
-            $table->timestamps();
-        });
-
-        Schema::create('model_has_permissions', function (Blueprint $table) {
-            $table->foreignId("permission_id")->constrained("permissions");
-            $table->string("model_type", 191);
-            $table->bigIncrements("model_id");
-        });
-
-        Schema::create('role_has_permissions', function (Blueprint $table) {
-            $table->foreignId("permission_id")->constrained("permissions");
-            $table->foreignId("role_id")->constrained("roles");
-        });
-
-        Schema::create('model_has_roles', function (Blueprint $table) {
-            $table->foreignId("role_id")->constrained("roles");
-            $table->string("model_type", 191);
-            $table->bigIncrements("model_id");
-        });
-
         // Creates a new DB table called "advertisements"
         Schema::create('advertisements', function (Blueprint $table) {
             $table->id();
@@ -111,11 +80,6 @@ class CreateB2bTables extends Migration
         Schema::dropIfExists('user_audience_maps');
         Schema::dropIfExists('categories');
         Schema::dropIfExists('user_category_maps');
-        Schema::dropIfExists('permissions');
-        Schema::dropIfExists('model_has_permissions');
-        Schema::dropIfExists('roles');
-        Schema::dropIfExists('role_has_permissions');
-        Schema::dropIfExists('model_has_roles');
         Schema::dropIfExists('advertisements');
     }
 }
