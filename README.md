@@ -75,7 +75,7 @@ sail artisan cache:clear</pre>
         <p>Stop the running container and remove existing volumes:</p>
         <pre>sail down -v</pre>
     </li>
-    <li><p>Generate the .env file and make sure to update DB_USERNAME and DB_password with the right information. Then save the file and run:</p>
+    <li><p>Generate the .env file and make sure to update DB_HOST, DB_USERNAME and DB_password with the right information (can be found in the "Setup" guide). Then save the file and run:</p>
         <pre>sail up -d</pre>
     </li>
 </ol>
