@@ -63,16 +63,16 @@ DB_PASSWORD=password</pre>
 <pre>rm -rf folder_name</pre>
 
 # Troubleshooting
-<p>If you accidentally "sail up" before generating an env file, you should:</p>
+<p>If get an "access denied" error while trying to migrate, you've probably accidentally used "sail up" before generating an env file. To fix this you should:</p>
 <ol>
     <li>
-        <p>Run:</p>
+        <p>Clear the config and application cache:<p>
         <pre>
 sail artisan config:clear
 sail artisan cache:clear</pre>
     </li>
     <li>
-        <p>Run:</p>
+        <p>Stop the running container and remove existing volumes:</p>
         <pre>sail down -v</pre>
     </li>
     <li><p>Generate the .env file and make sure to update DB_USERNAME and DB_password with the right information. Then save the file and run:</p>
