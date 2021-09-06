@@ -8,7 +8,7 @@
 </p>
 
 ## Setup
-<p>Follow these steps PRECISELY in order after cloning to avoid any errors:</p>
+<p>Follow these steps PRECISELY in order to avoid errors:</p>
 <ol>
     <li><p>Clone the project to your preferred folder:</p>
         <pre>git clone https://github.com/MALGRE-TOUT-TECH-TEAM/b2b-platform.git</pre>
