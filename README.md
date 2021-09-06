@@ -49,6 +49,7 @@
     DB_DATABASE=b2b_annonce_platform
     DB_USERNAME=sail	
     DB_PASSWORD=password</pre>
+        <p><strong>Make sure to save the file before going to next step.</strong></p>
     </li>
     <li><p>Run the project:</p> <pre>sail up -d</pre></li>
     <li><p>Now navigate to localhost in the browser, and generate the app encryption key, either by clicking the button or writing:</p>
@@ -60,6 +61,23 @@
 ## Deleting Project
 <p>If you run into problems trying to delete the project (due to corrupted files), you can run the following command, after navigating to the folder where your project is located:</p>
 <pre>rm -rf folder_name</pre>
+
+# Troubleshooting
+<p>If you accidentally "sail up" before generating an env file, you should:</p>
+<ol>
+    <li>Run:
+        <pre>
+        sail artisan config:clear
+        sail artisan cache:clear
+        </pre>
+    </li>
+    <li>Run:
+        <pre>sail down -v</pre>
+    </li>
+    <li>Generate the .env file and make sure to update DB_USERNAME and DB_password with the right information. Then save the file and run:
+        <pre>sail up -d</pre>
+    </li>
+</ol>
 
 # Policies
 
