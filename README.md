@@ -35,20 +35,21 @@
     <li>
         <p>Replace</p> 
         <pre>
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=b2b_annonce_platform
-    DB_USERNAME=root	
-    DB_PASSWORD=</pre>
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=b2b_annonce_platform
+DB_USERNAME=root	
+DB_PASSWORD=</pre>
         <p>with</p>
         <pre>
-    DB_CONNECTION=mysql
-    DB_HOST=mysql
-    DB_PORT=3306
-    DB_DATABASE=b2b_annonce_platform
-    DB_USERNAME=sail	
-    DB_PASSWORD=password</pre>
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=b2b_annonce_platform
+DB_USERNAME=sail	
+DB_PASSWORD=password</pre>
+        <p><strong>Make sure to save the file before going to next step.</strong></p>
     </li>
     <li><p>Run the project:</p> <pre>sail up -d</pre></li>
     <li><p>Now navigate to localhost in the browser, and generate the app encryption key, either by clicking the button or writing:</p>
@@ -61,8 +62,25 @@
 <p>If you run into problems trying to delete the project (due to corrupted files), you can run the following command, after navigating to the folder where your project is located:</p>
 <pre>rm -rf folder_name</pre>
 
-# Policies
+# Troubleshooting
+<p>If get an "access denied" error while trying to migrate, you've probably accidentally used "sail up" before generating an env file. To fix this you should:</p>
+<ol>
+    <li>
+        <p>Clear the config and application cache:<p>
+        <pre>
+sail artisan config:clear
+sail artisan cache:clear</pre>
+    </li>
+    <li>
+        <p>Stop the running container and remove existing volumes:</p>
+        <pre>sail down -v</pre>
+    </li>
+    <li><p>Generate the .env file and make sure to update DB_HOST, DB_USERNAME and DB_password with the right information (can be found in the "Setup" guide). Then save the file and run:</p>
+        <pre>sail up -d</pre>
+    </li>
+</ol>
 
+# Policies
 <p>The main branch in this repository is <strong>PROTECTED</strong>. You can only merge by making a new branch and then issuing a pull request. Pull requests has to be approved by two other code contributors.</p>
 <p>Branches should have the following naming convention:</p>
 <pre>name_of_functionality-name_of_branch_creator</pre>
