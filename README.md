@@ -97,15 +97,14 @@ sail artisan migrate:refresh //rolls back all migrations and execute the migrate
 sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> again</pre>
 
 ### Scaffolding
-<pre>
 <p>Create a new model class with the name "ModelName". Can be appended with -mfsc to generate a corresponding migration, factory, seeder and controller class:</p>
-sail artisan make:model ModelName -mfsc | --all
+<pre>sail artisan make:model ModelName -mfsc | --all</pre>
 <p>Create a new controller class with the name "TestController". All controller classes have to be suffixed with "Controller".</p>
-sail artisan make:controller TestController 
+<pre>sail artisan make:controller TestController</pre> 
 <p>Create a new migration class named "create_test_table". Migrations are used to generate database tables.</p>
-sail artisan make:migration create_test_table
+<pre>sail artisan make:migration create_test_table</pre>
 <p>Create a new seeder class named "DataSeeder". Seeder classes are used to populate the database with data. For example, we are using a seeder to auto generate dummy data.</p>
-sail artisan make:seeder DataSeeder </pre>
+<pre>sail artisan make:seeder DataSeeder</pre>
 
 ### UI
 <p>To generate laravel UI components, you first have to download the library:</p>
