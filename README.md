@@ -65,16 +65,17 @@
 # Troubleshooting
 <p>If you accidentally "sail up" before generating an env file, you should:</p>
 <ol>
-    <li>Run:
+    <li>
+        <p>Run:</p>
         <pre>
         sail artisan config:clear
-        sail artisan cache:clear
-        </pre>
+        sail artisan cache:clear</pre>
     </li>
-    <li>Run:
+    <li>
+        <p>Run:</p>
         <pre>sail down -v</pre>
     </li>
-    <li>Generate the .env file and make sure to update DB_USERNAME and DB_password with the right information. Then save the file and run:
+    <li><p>Generate the .env file and make sure to update DB_USERNAME and DB_password with the right information. Then save the file and run:</p>
         <pre>sail up -d</pre>
     </li>
 </ol>
