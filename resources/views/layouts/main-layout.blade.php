@@ -19,7 +19,7 @@
                 <nav class="navbar navbar-light bg-light">
                     <ul class="nav nav-pills flex-column">
                         <a class="navbar-brand" href="/">
-                            <img src="#" alt="logo">
+                            <img class="mw-100" src="{{ asset('media-assets/wide-malgre-tout-logo.png') }}" alt="Malgré Tout logo">
                         </a>
                         <li class="nav-item">
                             <a href="/" class="nav-link {{ (request()->is('/')) ? 'active' : '' }}">Dashboard</a>
@@ -54,10 +54,10 @@
 
             <!-- Content Wrapper -->
             <div class="col-lg-10 col-md-9 col-sm-12">
-                <header class="row">
+                <header class="row mh-25">
                     <ul class="nav justify-content-end bg-secondary">
                         <li class="nav-item">
-                            <img src="#malgretout-round-logo" class="rounded" />1107 Malgré Tout Credits
+                            <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded" />1107 Malgré Tout Credits
                         </li>
                         <li class="nav-item">
                             <img src="#flag" class="rounded"/>
@@ -72,8 +72,6 @@
                     </ul>
                 </header>
                 <div class="row">
-
-
                     <main class="pt-4">
                         <section id="content">
                             @yield('content')

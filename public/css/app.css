@@ -21,4 +21,7 @@ body{
 .nav-link:hover{
     color:var(--pink);
 }
+.nav-item img{
+    max-height:50px;
+}
 
