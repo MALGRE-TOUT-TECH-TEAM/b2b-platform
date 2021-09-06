@@ -67,8 +67,9 @@ DB_PASSWORD=password</pre>
 <ol>
     <li>
         <p>Run:</p>
-        <pre>sail artisan config:clear
-        sail artisan cache:clear</pre>
+        <pre>
+sail artisan config:clear
+sail artisan cache:clear</pre>
     </li>
     <li>
         <p>Run:</p>
@@ -80,7 +81,6 @@ DB_PASSWORD=password</pre>
 </ol>
 
 # Policies
-
 <p>The main branch in this repository is <strong>PROTECTED</strong>. You can only merge by making a new branch and then issuing a pull request. Pull requests has to be approved by two other code contributors.</p>
 <p>Branches should have the following naming convention:</p>
 <pre>name_of_functionality-name_of_branch_creator</pre>
