@@ -35,20 +35,20 @@
     <li>
         <p>Replace</p> 
         <pre>
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=b2b_annonce_platform
-    DB_USERNAME=root	
-    DB_PASSWORD=</pre>
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=b2b_annonce_platform
+DB_USERNAME=root	
+DB_PASSWORD=</pre>
         <p>with</p>
         <pre>
-    DB_CONNECTION=mysql
-    DB_HOST=mysql
-    DB_PORT=3306
-    DB_DATABASE=b2b_annonce_platform
-    DB_USERNAME=sail	
-    DB_PASSWORD=password</pre>
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=b2b_annonce_platform
+DB_USERNAME=sail	
+DB_PASSWORD=password</pre>
         <p><strong>Make sure to save the file before going to next step.</strong></p>
     </li>
     <li><p>Run the project:</p> <pre>sail up -d</pre></li>
@@ -67,8 +67,7 @@
 <ol>
     <li>
         <p>Run:</p>
-        <pre>
-        sail artisan config:clear
+        <pre>sail artisan config:clear
         sail artisan cache:clear</pre>
     </li>
     <li>
