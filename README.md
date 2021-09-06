@@ -29,12 +29,13 @@
     composer install --ignore-platform-reqs
 </pre>
     </li>
-    <li><p>Open the project in your code editor and write the following line:</p>
+    <li><p>Write the following line to copy generate a new .env file from the .env.example file:</p>
         <pre>cp .env.example .env</pre>
         <p>This will make a copy of the .env.example file. <strong>MAKE SURE TO NOT DELETE ANY OF THEM</strong></p>
+        <strong>Make sure to not delete any of the .env files.</strong>
     </li>
     <li>
-        <p>Replace</p> 
+        <p>Open the new .env file and replace the following:</p> 
         <pre>
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
