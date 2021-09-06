@@ -60,11 +60,7 @@ DB_PASSWORD=password</pre>
     <li><p>Lastly, migrate database tables into your databse by writing: <pre>sail artisan migrate</pre></p></li>
 </ol>
 
-## Deleting Project
-<p>If you run into problems trying to delete the project (due to corrupted files), you can run the following command, after navigating to the folder where your project is located:</p>
-<pre>rm -rf folder_name</pre>
-
-# Troubleshooting
+## Troubleshooting
 <p>If get an "access denied" error while trying to migrate, you've probably accidentally used "sail up" before generating an env file. To fix this you should:</p>
 <ol>
     <li>
@@ -82,10 +78,36 @@ sail artisan cache:clear</pre>
     </li>
 </ol>
 
-# Policies
+# Deleting Project
+<p>If you run into problems trying to delete the project (due to corrupted files), you can run the following command, after navigating to the folder where your project is located:</p>
+<pre>rm -rf folder_name</pre>
+
+## Policies
 <p>The main branch in this repository is <strong>PROTECTED</strong>. You can only merge by making a new branch and then issuing a pull request. Pull requests has to be approved by two other code contributors.</p>
 <p>Branches should have the following naming convention:</p>
 <pre>name_of_functionality-name_of_branch_creator</pre>
+
+## Useful Commands
+Here is a list of useful commands, that can or have been used in this project.
+
+# Migrations
+<pre>
+sail artisan migrate:reset //rolls back all application migrations
+sail artisan migrate:refresh //rolls back all migrations and execute the migrate command. Its like recreating your entire database.
+sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> again</pre>
+
+# Scaffolding
+<pre>
+sail artisan make:model ModelName //creates a new model class with the name "ModelName". Can be appended with -mfsc to generate a corresponding migration, factory, seeder and controller class.
+sail artisan make:controller TestController //creates a new controller class with the name "TestController". All controller classes have to be suffixed with "Controller".
+sail artisan make:migration create_test_table //creates a new migration class named "create_test_table". Migrations are used to generate database tables.
+sail artisan make:seeder DataSeeder //creates a new seeder class named "DataSeeder". Seeder classes are used to populate the database with data. For example, we are using a seeder to auto generate dummy data.</pre>
+
+# UI
+<p>To generate laravel UI components, you first have to download the library:</p>
+<pre>sail composer require Laravel/ui</pre>
+<p>In our project, we have used to the library to generate an authentication page with logic:</p>
+<pre>sail artisan ui:auth</pre>
 
 ## About Laravel
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
