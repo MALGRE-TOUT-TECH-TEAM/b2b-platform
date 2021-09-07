@@ -24,4 +24,8 @@ body{
 .nav-item img{
     max-height:50px;
 }
+#sidebar .nav-link.active{
+    background-color:var(--black);
+    color:var(--white);
+}
 
