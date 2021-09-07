@@ -119,6 +119,13 @@ sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> agai
 <p>In our project, we have used to the library to generate an authentication page with logic:</p>
 <pre>sail artisan ui:auth</pre>
 
+## Useful Links
+<ul>
+    <li>
+        <a href="https://laravel.com/docs/8.x/blade">Blade</a>
+    </li>
+</ul>
+
 ## About Laravel
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
