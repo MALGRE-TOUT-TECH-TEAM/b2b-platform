@@ -31,7 +31,7 @@ Route::get('campaigns', function() {
 });
 
 // Will probably need an id to identify which profile to load.
-Route::get('profile', function ($id) {
+Route::get('profile', function () {
     return view('profile');
 });
 Route::get('videos', function () {
