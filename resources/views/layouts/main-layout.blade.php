@@ -25,7 +25,7 @@
                             <a href="/" class="nav-link {{ (request()->is('/')) ? 'active' : '' }}">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#annoncer" class="nav-link {{ (request()->is('#annoncer')) ? 'active' : '' }}">Annoncer</a>
+                            <a href="/advertisements" class="nav-link {{ (request()->is('/advertisements')) ? 'active' : '' }}">Annoncer</a>
                         </li>
                         <li class="nav-item">
                             <a href="#kampagner" class="nav-link">Kampagner</a>
