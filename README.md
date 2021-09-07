@@ -29,26 +29,29 @@
     composer install --ignore-platform-reqs
 </pre>
     </li>
-    <li><p>Open the project in your code editor, and rename the .env.example file to .env. You can also write the following line, to generate the .env file for you:</p>
+    <li><p>Write the following line to copy generate a new .env file from the .env.example file:</p>
         <pre>cp .env.example .env</pre>
+        <p>This will make a copy of the .env.example file. <strong>MAKE SURE TO NOT DELETE ANY OF THEM</strong></p>
+        <strong>Make sure to not delete any of the .env files.</strong>
     </li>
     <li>
-        <p>Replace</p> 
+        <p>Open the new .env file and replace the following:</p> 
         <pre>
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=b2b_annonce_platform
-    DB_USERNAME=root	
-    DB_PASSWORD=</pre>
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=b2b_annonce_platform
+DB_USERNAME=root	
+DB_PASSWORD=</pre>
         <p>with</p>
         <pre>
-    DB_CONNECTION=mysql
-    DB_HOST=mysql
-    DB_PORT=3306
-    DB_DATABASE=b2b_annonce_platform
-    DB_USERNAME=sail	
-    DB_PASSWORD=password</pre>
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=b2b_annonce_platform
+DB_USERNAME=sail	
+DB_PASSWORD=password</pre>
+        <p><strong>Make sure to save the file before going to next step.</strong></p>
     </li>
     <li><p>Run the project:</p> <pre>sail up -d</pre></li>
     <li><p>Now navigate to localhost in the browser, and generate the app encryption key, either by clicking the button or writing:</p>
@@ -57,15 +60,64 @@
     <li><p>Lastly, migrate database tables into your databse by writing: <pre>sail artisan migrate</pre></p></li>
 </ol>
 
-## Deleting Project
+## Troubleshooting
+<p>If get an "access denied" error while trying to migrate, you've probably accidentally used "sail up" before generating an env file. To fix this you should:</p>
+<ol>
+    <li>
+        <p>Clear the config and application cache:<p>
+        <pre>
+sail artisan config:clear
+sail artisan cache:clear</pre>
+    </li>
+    <li>
+        <p>Stop the running container and remove existing volumes:</p>
+        <pre>sail down -v</pre>
+    </li>
+    <li><p>Generate the .env file and make sure to update DB_HOST, DB_USERNAME and DB_password with the right information (can be found in the "Setup" guide). Then save the file and run:</p>
+        <pre>sail up -d</pre>
+    </li>
+</ol>
+
+### Deleting Project
 <p>If you run into problems trying to delete the project (due to corrupted files), you can run the following command, after navigating to the folder where your project is located:</p>
 <pre>rm -rf folder_name</pre>
 
-# Policies
-
+## Policies
 <p>The main branch in this repository is <strong>PROTECTED</strong>. You can only merge by making a new branch and then issuing a pull request. Pull requests has to be approved by two other code contributors.</p>
 <p>Branches should have the following naming convention:</p>
 <pre>name_of_functionality-name_of_branch_creator</pre>
+
+## Useful Commands
+Here is a list of useful commands, that can or have been used in this project.
+
+### Migrations
+<pre>
+sail artisan migrate:reset //rolls back all application migrations
+sail artisan migrate:refresh //rolls back all migrations and execute the migrate command. Its like recreating your entire database.
+sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> again</pre>
+
+### Seeding
+<p>For generating dummy data, we are using the factory design pattern. For this, a model, seeder and factory class is required, which can be generated like this:</p>
+<pre>sail artisan make:model Advertisement -fs</pre>
+<p>In the factory class, we are generating fake data by using the <a href="https://github.com/fzaninotto/Faker" target="_blank">faker library.</a></p>
+<p>Children seeders like "AdvertisementSeeder" is being called from the parent "DatabaseSeeder". When the factory is setup to fill the proper keyvalue pairs, the following command can be run to seed the database:</p>
+<pre>sail artisan db:seed // can be appended with --class=AdvertisementSeeder if you only want to run a specific seeder</pre>
+
+### Scaffolding
+<p>Create a new model class with the name "ModelName". Can be appended with -mfsc to generate a corresponding migration, factory, seeder and controller class:</p>
+<pre>sail artisan make:model ModelName -mfsc | --all</pre>
+<p>Create a new controller class with the name "TestController". All controller classes have to be suffixed with "Controller".</p>
+<pre>sail artisan make:controller TestController</pre> 
+<p>Create a new migration class named "create_test_table". Migrations are used to generate database tables.</p>
+<pre>sail artisan make:migration create_test_table</pre>
+<p>Create a new seeder class named "DataSeeder". Seeder classes are used to populate the database with data. For example, we are using a seeder to auto generate dummy data.</p>
+<pre>sail artisan make:seeder DataSeeder</pre>
+
+### UI
+<p>To generate laravel UI components, you first have to download the library:</p>
+<pre>sail composer require Laravel/ui</pre>
+<p>In our project, we have used to the library to generate an authentication page with logic:</p>
+<pre>sail artisan ui:auth</pre>
 
 ## About Laravel
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
