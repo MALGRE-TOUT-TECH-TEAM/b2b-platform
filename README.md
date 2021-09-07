@@ -96,6 +96,12 @@ sail artisan migrate:reset //rolls back all application migrations
 sail artisan migrate:refresh //rolls back all migrations and execute the migrate command. Its like recreating your entire database.
 sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> again</pre>
 
+### Seeding
+<p>For generating dummy data, we are using the factory design pattern. For this, a model, seeder and factory class is required, which can be generated like this:</p>
+<pre>sail artisan make:model Advertisement -fs</pre>
+<p>In the factory class, we are generating fake data by using the <a href="https://github.com/fzaninotto/Faker" target="_blank">faker library</a></p>
+<p>Children seeders like "AdvertisementSeeder" is being called from the parent "DatabaseSeeder".</p>
+
 ### Scaffolding
 <p>Create a new model class with the name "ModelName". Can be appended with -mfsc to generate a corresponding migration, factory, seeder and controller class:</p>
 <pre>sail artisan make:model ModelName -mfsc | --all</pre>
