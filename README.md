@@ -99,7 +99,7 @@ sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> agai
 ### Seeding
 <p>For generating dummy data, we are using the factory design pattern. For this, a model, seeder and factory class is required, which can be generated like this:</p>
 <pre>sail artisan make:model Advertisement -fs</pre>
-<p>In the factory class, we are generating fake data by using the <a href="https://github.com/fzaninotto/Faker" target="_blank">faker library</a></p>
+<p>In the factory class, we are generating fake data by using the <a href="https://github.com/fzaninotto/Faker" target="_blank">faker library.</a></p>
 <p>Children seeders like "AdvertisementSeeder" is being called from the parent "DatabaseSeeder". When the factory is setup to fill the proper keyvalue pairs, the following command can be run to seed the database:</p>
 <pre>sail artisan db:seed // can be appended with --class=AdvertisementSeeder if you only want to run a specific seeder</pre>
 
