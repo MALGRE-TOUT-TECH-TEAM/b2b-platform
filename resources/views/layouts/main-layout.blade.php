@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/402c854aed.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}"> <!-- public/css/app.css -->
+
+
 </head>
 <body>
     <!-- The Big Wrapper -->
@@ -55,7 +57,7 @@
             <!-- Content Wrapper -->
             <div class="col-lg-10 col-md-9 col-sm-12">
                 <header class="row mh-25">
-                    <ul class="nav justify-content-end bg-secondary">
+                    <ul class="nav justify-content-end bg-light">
                         <li class="nav-item">
                             <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded" />1107 Malgré Tout Credits
                         </li>
@@ -65,8 +67,10 @@
                         </li>
                         <li class="nav-item">
                             <a href="#profil" class="nav-link">
-                                <img src="#profile-picture.jpg" class="rounded"/>
-                                Tina Bjerre <span class="text-light">Annoncør</span>
+                                <img src="#profile-picture.jpg" class="rounded" 
+                                onerror="insertPlaceholderImage.call(this, 50)"/>
+                                <span class="fw-bold">Tina Bjerre </span>
+                                <span class="text-light">Annoncør</span>
                             </a>
                         </li>
                     </ul>
@@ -83,7 +87,13 @@
             </div> <!-- Content Wrapper End -->
         </div>
     </div> <!-- The Big Wrapper END -->
-
+    <script>
+        function insertPlaceholderImage(width, height=width){
+            console.warn(`Called insertPlaceholderImage(width, height) on ${this.src}`);
+            this.onerror=null;
+            this.src=`https://via.placeholder.com/${width}x${height}.webp?text=placeholder+image`;
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
