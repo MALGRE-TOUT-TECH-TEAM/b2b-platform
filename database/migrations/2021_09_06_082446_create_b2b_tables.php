@@ -75,6 +75,14 @@ class CreateB2bTables extends Migration
      */
     public function down()
     {
+        Schema::table("user_audience_maps", function (Blueprint $table) {
+            $table->dropForeign('user_audience_maps_audience_id_foreign');
+            $table->dropIndex('user_audience_maps_audience_id_foreign');
+        });
+        Schema::table("user_category_maps", function (Blueprint $table) {
+            $table->dropForeign('user_category_maps_category_id_foreign');
+            $table->dropIndex('user_category_maps_category_id_foreign');
+        });
         Schema::dropIfExists('advertisements');
         Schema::dropIfExists('audiences');
         Schema::dropIfExists('user_audience_maps');
