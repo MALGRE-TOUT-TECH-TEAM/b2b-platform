@@ -1,29 +1,32 @@
-:root{
-    --pink: #db8679;
-    --black: #000000;
-    --gray: #8e8e8e;
-    --white:#f5f6fa;
+h1{
+    color: blue!important;
 }
-
 body{
-    background: var(--white);
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.login-container{
+    background-image: url("../img/Varmblodshest-ryg-1024x683.webp");
     background-size: cover;
-    min-height: 100vh;
-    margin:0;
-    padding:0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
-.text-pink{
-    color:var(--pink);
+.red{
+    border:1px solid red;
 }
-.nav-link{
-    color:var(--black);
+.login-box{
+    height:480px;
+    width:480px;
+    background-color:rgba(000, 000, 000, 0.5);
+    border-radius: 20px;
+    padding:20px;
+    box-shadow: 
+    inset 0 -9px 9px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+    inset 0 12px 9px rgba(0,0,0,0.6), /*top internal highlight*/
+    inset -5px -5px 10px rgba(255,255,255,0.3); /*top internal highlight*/
 }
-.nav-link:hover{
-    color:var(--pink);
-}
-
-/* #sidebar{
-    position: absolute;
-    top:0;
-    left:0;
-} */
