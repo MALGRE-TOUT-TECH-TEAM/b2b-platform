@@ -9,8 +9,6 @@
     <script src="https://kit.fontawesome.com/402c854aed.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}"> <!-- public/css/app.css -->
-
-
 </head>
 <body>
     <!-- The Big Wrapper -->
@@ -59,16 +57,17 @@
                 <header class="row mh-25">
                     <ul class="nav justify-content-end bg-light">
                         <li class="nav-item">
-                            <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded" />1107 Malgré Tout Credits
+                            <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded" onerror="insertPlaceholderImage.call(this, 50)" />1107 Malgré Tout Credits
                         </li>
                         <li class="nav-item">
-                            <img src="#flag" class="rounded"/>
-                            <a href="#language" class="nav-link">Sprogvalg</a>
+                            <a href="#language" class="nav-link">
+                                <img src="#flag" class="rounded" onerror="insertPlaceholderImage.call(this, 50)" />
+                                Sprogvalg
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a href="#profil" class="nav-link">
-                                <img src="#profile-picture.jpg" class="rounded" 
-                                onerror="insertPlaceholderImage.call(this, 50)"/>
+                                <img src="#profile-picture.jpg" class="rounded" onerror="insertPlaceholderImage.call(this, 50)" />
                                 <span class="fw-bold">Tina Bjerre </span>
                                 <span class="text-light">Annoncør</span>
                             </a>
@@ -76,11 +75,10 @@
                     </ul>
                 </header>
                 <div class="row">
-                    <main class="pt-4">
+                    <main class="p-4">
                         <section id="content">
                             @yield('content')
                         </section>
-
                     </main>
                     <footer class="container d-flex justify-content-center">Copyright Malgré Tout 2021-2021</footer>
                 </div>
@@ -88,11 +86,12 @@
         </div>
     </div> <!-- The Big Wrapper END -->
     <script>
-        function insertPlaceholderImage(width, height=width){
+        function insertPlaceholderImage(width, height = width) {
             console.warn(`Called insertPlaceholderImage(width, height) on ${this.src}`);
-            this.onerror=null;
-            this.src=`https://via.placeholder.com/${width}x${height}.webp?text=placeholder+image`;
+            this.onerror = null; // resets the error to prevent infinite loop.
+            this.src = `https://via.placeholder.com/${width}x${height}.webp?text=placeholder+image`;
         }
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

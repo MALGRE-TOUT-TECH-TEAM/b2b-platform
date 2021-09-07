@@ -28,4 +28,8 @@ body{
     background-color:var(--black);
     color:var(--white);
 }
+#sidebar{
+    margin:0;
+    padding:0;
+}
 
