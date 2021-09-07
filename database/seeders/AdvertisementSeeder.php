@@ -14,6 +14,7 @@ class AdvertisementSeeder extends Seeder
      */
     public function run()
     {
+        // Generates Advertisement data 50 times and persists it to the database. 
         Advertisement::factory()->times(50)->create();
     }
 }

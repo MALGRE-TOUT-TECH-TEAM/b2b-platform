@@ -11,6 +11,7 @@ class Advertisement extends Model
     use HasFactory;
     use SoftDeletes;
 
+    // controls what data can be filled in the database. 
     protected $fillable = [
         "title",
         "start_date",

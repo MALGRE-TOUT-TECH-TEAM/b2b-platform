@@ -19,6 +19,7 @@ class AdvertisementFactory extends Factory
      *
      * @return array
      */
+    // Using the faker library to generate fake data that matches the variable types. 
     public function definition()
     {
         return [
