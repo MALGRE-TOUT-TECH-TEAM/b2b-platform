@@ -55,35 +55,44 @@
             <!-- Content Wrapper -->
             <div class="col-lg-10 col-md-9 col-sm-12">
                 <header class="row mh-25">
-                    <ul class="nav justify-content-end bg-secondary">
+                    <ul class="nav justify-content-end bg-light">
                         <li class="nav-item">
-                            <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded" />1107 Malgré Tout Credits
+                            <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded" onerror="insertPlaceholderImage.call(this, 50)" />1107 Malgré Tout Credits
                         </li>
                         <li class="nav-item">
-                            <img src="#flag" class="rounded"/>
-                            <a href="#language" class="nav-link">Sprogvalg</a>
+                            <a href="#language" class="nav-link">
+                                <img src="#flag" class="rounded" onerror="insertPlaceholderImage.call(this, 50)" />
+                                Sprogvalg
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a href="#profil" class="nav-link">
-                                <img src="#profile-picture.jpg" class="rounded"/>
-                                Tina Bjerre <span class="text-light">Annoncør</span>
+                                <img src="#profile-picture.jpg" class="rounded" onerror="insertPlaceholderImage.call(this, 50)" />
+                                <span class="fw-bold">Tina Bjerre </span>
+                                <span class="text-light">Annoncør</span>
                             </a>
                         </li>
                     </ul>
                 </header>
                 <div class="row">
-                    <main class="pt-4">
+                    <main class="p-4">
                         <section id="content">
                             @yield('content')
                         </section>
-
                     </main>
                     <footer class="container d-flex justify-content-center">Copyright Malgré Tout 2021-2021</footer>
                 </div>
             </div> <!-- Content Wrapper End -->
         </div>
     </div> <!-- The Big Wrapper END -->
+    <script>
+        function insertPlaceholderImage(width, height = width) {
+            console.warn(`Called insertPlaceholderImage(width, height) on ${this.src}`);
+            this.onerror = null; // resets the error to prevent infinite loop.
+            this.src = `https://via.placeholder.com/${width}x${height}.webp?text=placeholder+image`;
+        }
 
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
