@@ -107,7 +107,7 @@ sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> agai
 <p>Create a new model class with the name "ModelName". Can be appended with -mfsc to generate a corresponding migration, factory, seeder and controller class:</p>
 <pre>sail artisan make:model ModelName -mfsc | --all</pre>
 <p>Create a new controller class with the name "TestController". All controller classes have to be suffixed with "Controller".</p>
-<pre>sail artisan make:controller TestController</pre> 
+<pre>sail artisan make:controller TestController</pre> <p>Use the --resource to make a controller with CRUD functions.</p>
 <p>Create a new migration class named "create_test_table". Migrations are used to generate database tables.</p>
 <pre>sail artisan make:migration create_test_table</pre>
 <p>Create a new seeder class named "DataSeeder". Seeder classes are used to populate the database with data. For example, we are using a seeder to auto generate dummy data.</p>
