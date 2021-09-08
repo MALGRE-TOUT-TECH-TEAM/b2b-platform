@@ -22,7 +22,7 @@
                             <img class="mw-100" src="{{ asset('media-assets/wide-malgre-tout-logo.png') }}" alt="Malgré Tout logo">
                         </a>
                         <li class="nav-item">
-                            <a href="/" class="nav-link {{ (request()->is('/')) ? 'active' : '' }}">Dashboard</a>
+                            <a href="/dashboard" class="nav-link {{ (request()->is('dashboard')) ? 'active' : '' }}">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a href="/advertisements" class="nav-link {{ (request()->is('advertisements*')) ? 'active' : '' }}">Annoncer</a>

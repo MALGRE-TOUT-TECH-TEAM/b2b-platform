@@ -19,19 +19,21 @@ Route::get('testing', function () {
     return view('testing');
 });
 
-Route::get('/', 'DashboardController@index');
+Route::get('/', function () {
+    return view('temp-landing-page');
+});
 
-Route::get("dashboard", 'DashboardController@index');
+Route::get("dashboard", [App\Http\Controllers\DashboardController::class, 'index']);
 
-Route::get('advertisements', 'AdvertisementsController@index');
+Route::get('advertisements', [App\Http\Controllers\AdvertisementsController::class, 'index']);
 
-Route::get('campaigns', 'CampaignsController@index');
+Route::get('campaigns', [App\Http\Controllers\CampaignsController::class, 'index']);
 
-Route::get('profile', 'ProfileController@index');
+Route::get('profile', [App\Http\Controllers\ProfileController::class, 'index']);
 
-Route::get('videos', 'VideosController@index');
+Route::get('videos', [App\Http\Controllers\VideosController::class, 'index']);
 
-Route::get('addons', 'AddonsController@index');
+Route::get('addons', [App\Http\Controllers\AddonsController::class, 'index']);
 
 Auth::routes();
 
