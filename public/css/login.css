@@ -1,0 +1,171 @@
+a{
+    text-decoration: none;
+    color:white;
+    font-weight: 100;
+}
+a:hover{
+    color:#db9c91;
+}
+
+.row a{
+    font-size: larger;
+}
+.login-col{
+    border-right: 1px solid rgba(190, 190, 190, 0.50);
+}
+.login-col a{
+    font-weight: 500;
+}
+.opret-col a{
+    padding:0 0 0 7px;
+}
+.login-container{
+    background-image: url("../img/Varmblodshest-ryg-1024x683.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.red{
+    border:1px solid red;
+}
+.login-box{
+    height:420px;
+    width:450px;
+    background-color:rgba(000, 000, 000, 0.5);
+    border-radius: 20px;
+    padding-top:40px;
+    padding-right:25px;
+    padding-bottom:40px;
+    padding-left:25px;
+    box-shadow: 
+    inset 0 -9px 9px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+    inset 0 12px 9px rgba(0,0,0,0.6), /*top internal highlight*/
+    inset -5px -5px 10px rgba(255,255,255,0.3); /*top internal highlight*/
+}
+.login-form{
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:40px;
+}
+.row label{
+    margin:0;
+    padding:0 7px 0 7px;
+    color:white;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+.login-form input{
+    background:transparent;
+    color:white;
+    padding:0 7px 0 7px;
+    height:40px;
+    border:none;
+    border-bottom:1px solid rgba(255, 255, 255, 0.212);
+    border-radius:0;
+    outline:none;
+}
+.email-input-box, .kode-input-box{
+    padding: 20px 0 0 0;
+
+}
+input:focus{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius:3px;
+}
+.accept-box{
+    padding:0;
+}
+.accept-box p{
+    color:white;
+    margin:0;
+}
+.column-text{
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+}
+.column-text a{
+    font-size: 17px;
+    font-weight: 100;
+}
+.column-text label{
+    font-size: 17px;
+    font-weight: 100;
+    padding:0 0 0 15px;
+}
+.column-text label:hover{
+    color:#db9c91;
+}
+.column-checkbox{
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    margin-top:19px;
+}
+.column-checkbox input{
+    margin:0;
+}
+ /* Round checkbox */
+.round label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    height: 22px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 22px;
+  }
+  .round label:after {
+    border: 2px solid #db9c91;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 9px;
+    left: 3px;
+    opacity: 0;
+    position: absolute;
+    top: 3px;
+    transform: rotate(-45deg);
+    width: 16px;
+  }
+  .round input[type="checkbox"] {
+    visibility: hidden;
+  }
+  
+  .round input[type="checkbox"]:checked + label {
+    background-color: white;
+    border-color: white;
+  }
+  
+  .round input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+  }
+.login-btn{
+    margin:10px 0 0 0;
+    height:60px;
+    border-radius: 30px;
+    background: rgb(223,118,100);
+    background: linear-gradient(0deg, rgba(223,118,100,1) 0%, rgba(219,156,145,1) 100%);
+    color:white;
+    font-weight: 500;
+    font-size: larger;
+    border:none;
+}
+
+.login-btn:hover{
+    background: rgb(250,174,161);
+    background: linear-gradient(0deg, rgba(250,174,161,1) 0%, rgba(246,187,176,1) 100%);
+}
+.login-btn:active{
+    background: rgb(255,201,192);
+    background: linear-gradient(0deg, rgba(255,201,192,1) 0%, rgba(255,220,214,1) 100%);
+}
