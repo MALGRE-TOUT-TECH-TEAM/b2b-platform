@@ -12,9 +12,19 @@ body{
     margin:0;
     padding:0;
 }
+/** Text & Background **/
 .text-pink{
     color:var(--pink);
 }
+.bg-pink{
+    background-color:var(--pink);
+}
+.box-shadow{
+    box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.1) inset;
+}
+/** Text & Background Colors END **/
+
+/** NAV **/
 .nav-link{
     color:var(--black);
 }
@@ -28,6 +38,9 @@ body{
     background-color:var(--black);
     color:var(--white);
 }
+
+/** NAV END **/
+
 #sidebar{
     margin:0;
     padding:0;
