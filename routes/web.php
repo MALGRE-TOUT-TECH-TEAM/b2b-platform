@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('testing', function () {
     return view('testing');
 });
+Route::get('profile', function () {
+    return view('profile');
+});
 
 Route::get('/', function () {
     return view('temp-landing-page');
