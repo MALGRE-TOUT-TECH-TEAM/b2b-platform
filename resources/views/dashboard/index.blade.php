@@ -3,6 +3,15 @@
 @section('content')
 <section class="row bg-primary" id="visitor-analytics">
     <h1>Dashboard</h1>
+    <div class="col-md-2 bg-primary">
+
+    </div>
+    <div class="col-md-2 bg-secondary">
+
+    </div>
+    <div class="col-md-6 bg-dark">
+        
+    </div>
 </section>
 <section class="row">
     <h1>Winthers Rideudstyr</h1>
