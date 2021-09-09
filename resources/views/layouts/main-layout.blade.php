@@ -57,11 +57,11 @@
                 <header class="row mh-25">
                     <ul class="nav justify-content-end bg-light">
                         <li class="nav-item">
-                            <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 50)" />1107 Malgré Tout Credits
+                            <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 30)" />1107 Malgré Tout Credits
                         </li>
                         <li class="nav-item">
                             <a href="#language" class="nav-link">
-                                <img src="#flag" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 50)" />
+                                <img src="#flag" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 30)" />
                                 Sprogvalg
                             </a>
                         </li>
