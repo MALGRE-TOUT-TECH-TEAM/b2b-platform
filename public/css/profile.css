@@ -1,0 +1,134 @@
+p{
+    color:white;
+}
+.profile-wrapper{
+    background-image: url("../media-assets/Varmblodshest-ryg-1024x683.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+}
+.profile-box{
+    margin-left:5%;
+    margin-right:5%;
+    min-height:480px;
+    width:880px;
+    background-color:rgba(000, 000, 000, 0.5);
+    border-radius: 20px;
+    padding-top:40px;
+    padding-right:25px;
+    padding-bottom:40px;
+    padding-left:25px;
+    box-shadow: 
+    inset 0 -9px 9px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+    inset 0 12px 9px rgba(0,0,0,0.6), /*top internal highlight*/
+    inset -5px -5px 10px rgba(255,255,255,0.3); /*top internal highlight*/
+}
+.profile-header-text{
+    color:white;
+    font-weight: 100;
+    margin:0 0 20px 0;
+}
+.profile-image-box img{
+    padding:0;
+}
+.red{
+    border: 1px solid red;
+}
+.row{
+    padding:5px 5px 5px 5px;
+}
+input, select{
+    background:transparent;
+    color:white;
+    padding:0 7px 0 7px;
+    height:40px;
+    border:none;
+    border-bottom:1px solid rgba(255, 255, 255, 0.212);
+    border-radius:0;
+    outline:none;
+}
+select option{
+    background: rgba(0, 0, 0, 1);
+    padding:13px;
+}
+input:focus, select:focus{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius:3px;
+}
+label{
+    margin:0;
+    padding:0 7px 0 7px;
+    color:white;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+.profile-btn{
+    margin:10px 0 0 0;
+    width:100%;
+    height:60px;
+    border-radius: 30px;
+    background: rgb(223,118,100);
+    background: linear-gradient(0deg, rgba(223,118,100,1) 0%, rgba(219,156,145,1) 100%);
+    color:white;
+    font-weight: 500;
+    font-size: larger;
+    border:none;
+}
+
+.profile-btn:hover{
+    background: rgb(250,174,161);
+    background: linear-gradient(0deg, rgba(250,174,161,1) 0%, rgba(246,187,176,1) 100%);
+}
+.profile-btn:active{
+    background: rgb(255,201,192);
+    background: linear-gradient(0deg, rgb(114, 89, 84) 0%, rgba(255,220,214,1) 100%);
+}
+
+
+.profile-image-box img{
+
+    background-position: center;
+    background-size: cover;
+
+    border:1px solid white;
+    border-radius: 50%;
+    height:120px;
+    width:120px;
+}
+.profile-image-box{
+    padding:0;
+}
+.profile-image-box input{
+    display:none;
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+.file-upload-box{
+    padding:10px 0 0 0;
+}
+.upload-btn{
+    width:120px;
+    padding:5px 0 5px 0;
+    text-align: center;
+    background: rgb(223,118,100);
+    background: linear-gradient(0deg, rgba(223,118,100,1) 0%, rgba(219,156,145,1) 100%);
+    border-radius: 3px;
+}
+.upload-btn:hover{
+    background: rgb(250,174,161);
+    background: linear-gradient(0deg, rgba(250,174,161,1) 0%, rgba(246,187,176,1) 100%);
+}
+.upload-btn:active{
+    background: rgb(255,201,192);
+    background: linear-gradient(0deg, rgba(255,201,192,1) 0%, rgba(255,220,214,1) 100%);
+}
+.file-text{
+    padding:5px;
+    text-align: start;
+}

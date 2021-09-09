@@ -50,14 +50,15 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'firstname' => ['required', 'string', 'max:191'],
-            'surname' => ['required', 'string', 'max:191'],
+            // 'firstname' => ['required', 'string', 'max:191'],
+            // 'surname' => ['required', 'string', 'max:191'],
             'email' => ['required', 'string', 'email', 'max:191', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'max:191', 'confirmed'],
-            'birthdate' => ['required', 'date'],
-            'gender' => ['required', 'string', 'min:1', 'max:20'],
-            'photo' => ['required', 'string', 'min:1', 'max:50'],
-            'telephone' => ['required', 'string', 'min:1', 'max:50'],
+            'password' => ['required', 'string', 'min:8', 'max:191'],
+            'remember' => ['required'],
+            // 'birthdate' => ['required', 'date'],
+            // 'gender' => ['required', 'string', 'min:1', 'max:20'],
+            // 'photo' => ['required', 'string', 'min:1', 'max:50'],
+            // 'telephone' => ['required', 'string', 'min:1', 'max:50'],
         ]);
     }
 
@@ -70,14 +71,18 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'firstname' => $data['firstname'],
-            'surname' => $data['surname'],
+            // 'firstname' => $data['firstname'],
+            // 'surname' => $data['surname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'birthdate' => $data['birthdate'],
-            'gender' => $data['gender'],
-            'photo' => $data['photo'],
-            'telephone' => $data['telephone'],
+            // 'birthdate' => $data['birthdate'],
+            // 'gender' => $data['gender'],
+            // 'photo' => $data['photo'],
+            // 'telephone' => $data['telephone'],
         ]);
+    }
+    protected function update(array $data)
+    {
+        
     }
 }
