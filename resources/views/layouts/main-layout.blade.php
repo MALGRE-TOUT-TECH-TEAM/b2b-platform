@@ -75,7 +75,7 @@
                     </ul>
                 </header>
                 <div class="row">
-                    <main class="p-4 min-vh-75">
+                    <main class="min-vh-75">
                         <section id="content">
                             @yield('content')
                         </section>
