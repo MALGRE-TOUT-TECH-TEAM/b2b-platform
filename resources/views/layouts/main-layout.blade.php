@@ -22,23 +22,23 @@
                             <img class="mw-100" src="{{ asset('media-assets/wide-malgre-tout-logo.png') }}" alt="Malgré Tout logo">
                         </a>
                         <li class="nav-item">
-                            <a href="/" class="nav-link {{ (request()->is('/')) ? 'active' : '' }}">Dashboard</a>
+                            <a href="/dashboard" class="nav-link {{ (request()->is('dashboard')) ? 'active' : '' }}">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#annoncer" class="nav-link {{ (request()->is('#annoncer')) ? 'active' : '' }}">Annoncer</a>
+                            <a href="/advertisements" class="nav-link {{ (request()->is('advertisements*')) ? 'active' : '' }}">Annoncer</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#kampagner" class="nav-link">Kampagner</a>
+                            <a href="/campaigns" class="nav-link {{ (request()->is('campaigns*')) ? 'active' : '' }}">Kampagner</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#profil" class="nav-link">Profil</a>
+                            <a href="/profile" class="nav-link {{ (request()->is('profile*')) ? 'active' : '' }}">Profil</a>
                         </li>
                         <hr> <!-- Horizontal rule -->
                         <li class="nav-item">
-                            <a href="#videoer" class="nav-link">Videoer<sub class="text-pink">kommer snart</sub></a>
+                            <a href="/videos" class="nav-link {{ (request()->is('videos*')) ? 'active' : '' }}">Videoer<sub class="text-pink">kommer snart</sub></a>
                         </li>
                         <li class="nav-item">
-                            <a href="#addons" class="nav-link">Addons</a>
+                            <a href="/addons" class="nav-link {{ (request()->is('addons*')) ? 'active' : '' }}">Addons</a>
                         </li>
                         <li class="nav-item">
                             <a href="#ring" class="nav-link">+45 7027 4300</a>

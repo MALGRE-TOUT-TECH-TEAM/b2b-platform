@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdvertisementsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,15 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
-Route::get("dashboard", function () {
-    return view('dashboard');
-});
+// Returns a view you can use for testing new things (will be removed at some point)
 Route::get('testing', function () {
     return view('testing');
 });
+
+Route::get('/', function () {
+    return view('temp-landing-page');
+});
+
+Route::get("dashboard", [App\Http\Controllers\DashboardController::class, 'index']);
+
+Route::get('advertisements', [App\Http\Controllers\AdvertisementsController::class, 'index']);
+
+Route::get('campaigns', [App\Http\Controllers\CampaignsController::class, 'index']);
+
+Route::get('profile', [App\Http\Controllers\ProfileController::class, 'index']);
+
+Route::get('videos', [App\Http\Controllers\VideosController::class, 'index']);
+
+Route::get('addons', [App\Http\Controllers\AddonsController::class, 'index']);
 
 Auth::routes();
 
