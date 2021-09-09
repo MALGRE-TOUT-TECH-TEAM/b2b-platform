@@ -1,4 +1,3 @@
-/* CSS variables are declared in :root */ 
 :root{
     --pink: #db8679;
     --black: #000000;
@@ -33,10 +32,3 @@ body{
     margin:0;
     padding:0;
 }
-
-/* On screens that are 992px or more */
-@media screen and (min-width: 992px) {
-    #sidebar ul{
-      min-height:calc(100vh - 20px);
-    }
-  }

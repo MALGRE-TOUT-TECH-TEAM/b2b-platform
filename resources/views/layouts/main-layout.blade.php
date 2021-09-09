@@ -45,7 +45,7 @@
                         </li>
                         <hr> <!-- Horizontal rule -->
                         <li class="mt-5">
-                            <a href="#logout" class="nav-link"><i class="fas fa-mobile-alt"></i> Log ud</a>
+                            <a href="#logout"><i class="fas fa-mobile-alt"></i>Log ud</a>
                         </li>
                     </ul>
 
@@ -57,17 +57,17 @@
                 <header class="row mh-25">
                     <ul class="nav justify-content-end bg-light">
                         <li class="nav-item">
-                            <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 50)" />1107 Malgré Tout Credits
+                            <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded" onerror="insertPlaceholderImage.call(this, 50)" />1107 Malgré Tout Credits
                         </li>
                         <li class="nav-item">
                             <a href="#language" class="nav-link">
-                                <img src="#flag" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 50)" />
+                                <img src="#flag" class="rounded" onerror="insertPlaceholderImage.call(this, 50)" />
                                 Sprogvalg
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#profil" class="nav-link">
-                                <img src="#profile-picture.jpg" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 50)" />
+                                <img src="#profile-picture.jpg" class="rounded" onerror="insertPlaceholderImage.call(this, 50)" />
                                 <span class="fw-bold">Tina Bjerre </span>
                                 <span class="text-light">Annoncør</span>
                             </a>
