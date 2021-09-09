@@ -127,6 +127,9 @@ sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> agai
     <li>
         <a href="https://laravel.com/docs/8.x/blade">Blade</a>
     </li>
+        <li>
+        <a href="https://laravel.com/docs/8.x/migrations#available-column-types">Database Migrations Column Types</a>
+    </li>
 </ul>
 
 ## About Laravel
