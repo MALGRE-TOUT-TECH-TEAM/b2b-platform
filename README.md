@@ -16,6 +16,7 @@
     </ul>
 <p>From the terminal, type <pre>wsl</pre> to engage the linux subsystem. After this, type <pre>cd ~</pre> to change directory to your user account's home folder. From here you can follow the guide below. <strong>MAKE SURE TO FOLLOW THE STEPS CORRECTLY TO AVOID ERRORS!</strong></p>
 <ol>
+    ### Cloning and Running the Project
     <li><p>Clone the project to your preferred folder:</p>
         <pre>git clone https://github.com/MALGRE-TOUT-TECH-TEAM/b2b-platform.git</pre>
     </li>
