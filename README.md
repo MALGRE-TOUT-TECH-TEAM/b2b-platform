@@ -127,8 +127,11 @@ sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> agai
     <li>
         <a href="https://laravel.com/docs/8.x/blade">Blade</a>
     </li>
-        <li>
+    <li>
         <a href="https://laravel.com/docs/8.x/migrations#available-column-types">Database Migrations Column Types</a>
+    </li>
+    <li>
+        <a href="https://laravel.com/docs/7.x/eloquent">Eloquent - Database Queries From Model Class</a>
     </li>
 </ul>
 
