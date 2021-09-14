@@ -14,7 +14,8 @@
     <li>Docker Desktop (with enabled Ubuntu integration)</li>
     <li>Windows Terminal (optional, but recommended)</li>
     </ul>
-<p>From the terminal, type <pre>wsl</pre> to engage the linux subsystem. After this, type <pre>cd ~</pre> to change directory to your user account's home folder. From here you can follow the guide below. <strong>MAKE SURE TO FOLLOW THE STEPS CORRECTLY TO AVOID ERRORS!</strong></p>
+<p>From the terminal, type <code>wsl</code> to engage the linux subsystem. After this, type <code>cd ~</code> to change directory to your user account's home folder. From here you can follow the guide below. <strong>MAKE SURE TO FOLLOW THE STEPS CORRECTLY TO AVOID ERRORS!</strong></p>
+
 ### Cloning and Running the Project
 <ol>
     <li><p>Clone the project to your preferred folder:</p>
@@ -38,7 +39,7 @@
     </li>
     <li><p>Write the following line to copy generate a new .env file from the .env.example file:</p>
         <pre>cp .env.example .env</pre>
-        <p>This will make a copy of the .env.example file. <strong>MAKE SURE TO NOT DELETE ANY OF THEM</strong></p>
+        <p>This will make a copy of the .env.example file.</p>
         <strong>Make sure to not delete any of the .env files.</strong>
     </li>
     <li>
@@ -58,7 +59,7 @@ DB_PORT=3306
 DB_DATABASE=b2b_annonce_platform
 DB_USERNAME=sail	
 DB_PASSWORD=password</pre>
-        <p><strong>Make sure to save the file before going to next step.</strong></p>
+        <p><strong>Make sure to save the file before going to the next step.</strong></p>
     </li>
     <li><p>Run the project:</p> <pre>sail up -d</pre></li>
     <li><p>Now navigate to localhost in the browser, and generate the app encryption key, either by clicking the button or writing:</p>
