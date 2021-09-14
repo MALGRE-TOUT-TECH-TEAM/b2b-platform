@@ -8,7 +8,13 @@
 </p>
 
 ## Setup
-<p>Follow these steps PRECISELY in order to avoid errors:</p>
+<p>Before following this setup guide, make sure you have installed the following:</p>
+<ul>
+    <li>WSL (Windows Subsystem for Linux)</li>
+    <li>Docker Desktop (with enabled Ubuntu integration)</li>
+    <li>Windows Terminal (optional, but recommended)</li>
+    </ul>
+<p>From the terminal, type <pre>wsl</pre> to engage the linux subsystem. After this, type <pre>cd ~</pre> to change directory to your user account's home folder. From here you can follow the guide below. <strong>MAKE SURE TO FOLLOW THE STEPS CORRECTLY TO AVOID ERRORS!</strong></p>
 <ol>
     <li><p>Clone the project to your preferred folder:</p>
         <pre>git clone https://github.com/MALGRE-TOUT-TECH-TEAM/b2b-platform.git</pre>
