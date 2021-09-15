@@ -55,7 +55,7 @@
             <!-- Content Wrapper -->
             <div class="col-lg-10 col-md-9 col-sm-12">
                 <header class="row mh-25">
-                    <ul class="nav justify-content-end bg-light">
+                    <ul class="nav justify-content-end align-items-center bg-light">
                         <li class="nav-item">
                             <img src="{{ asset('media-assets/Logo-Malgré-Tout-192x192.png') }}" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 30)" />1107 Malgré Tout Credits
                         </li>

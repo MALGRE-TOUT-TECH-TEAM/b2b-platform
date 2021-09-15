@@ -22,7 +22,7 @@ body{
 .box-shadow{
     box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.1) inset;
 }
-/** Text & Background Colors END **/
+/** Text & Background END **/
 
 /** NAV **/
 .nav-link{
@@ -34,14 +34,19 @@ body{
 .nav-item img{
     max-height:50px;
 }
+
+
+/** NAV END **/
+
+/** Sidebar **/
+#sidebar{
+    margin:0;
+    padding:0;
+    border-right:1px solid rgba(0, 0, 0, 0.1);
+}
 #sidebar .nav-link.active{
     background-color:var(--black);
     color:var(--white);
 }
 
-/** NAV END **/
-
-#sidebar{
-    margin:0;
-    padding:0;
-}
+/** Sidebar END **/
