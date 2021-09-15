@@ -158,10 +158,6 @@
                 document.getElementById('preview').style.backgroundImage = "url('" + event.target.result + "')";
                 let file = document.querySelector('input[type=file]').files[0];
                 document.getElementById('photo').value = file.name
-
-                console.log(file);
-
-
             }
             fileReader.readAsDataURL(file[0]);
         }
