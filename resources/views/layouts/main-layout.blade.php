@@ -61,11 +61,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#language" class="nav-link">
-<<<<<<< HEAD
-                                <img src="#flag" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 30)" />
-=======
-                                <img src="{{ asset('media-assets/flag-dk-163x120.jpg') }}" class="rounded" onerror="insertPlaceholderImage.call(this, 50)" />
->>>>>>> main
+                                <img src="{{ asset('media-assets/flag-dk-36x36.jpg') }}" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 30)" />
                                 Sprogvalg
                             </a>
                         </li>
