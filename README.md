@@ -130,6 +130,8 @@ sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> agai
 <pre>sail composer require Laravel/ui</pre>
 <p>In our project, we have used to the library to generate an authentication page with logic:</p>
 <pre>sail artisan ui:auth</pre>
+<p>Downloading bootstrap:</p>
+<pre>sail artisan ui:bootstrap</pre>
 
 ## Useful Links
 <ul>
