@@ -83,7 +83,6 @@ class RegisterController extends Controller
             'photo' => $data['photo'],
             'telephone' => $data['telephone'],
         ]);
-        Auth: 
     }
     protected function update(array $data)
     {
