@@ -5,7 +5,11 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Client\Request as ClientRequest;
+use Illuminate\Http\Request as HttpRequest;
+use App\Http\Controllers\Auth\Input;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -30,7 +34,6 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
-
     /**
      * Create a new controller instance.
      *
@@ -52,7 +55,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             // 'firstname' => ['required', 'string', 'max:191'],
             // 'surname' => ['required', 'string', 'max:191'],
-            'email' => ['required', 'string', 'email', 'max:191', 'unique:users'],
+            //'email' => ['required', 'string', 'email', 'max:191', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'max:191'],
             'remember' => ['required'],
             // 'birthdate' => ['required', 'date'],
@@ -68,21 +71,22 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    protected function create(HttpRequest $data)
     {
         return User::create([
-            // 'firstname' => $data['firstname'],
-            // 'surname' => $data['surname'],
-            'email' => $data['email'],
+             'firstname' => $data['firstname'],
+            'surname' => $data['surname'],
+            'email'=> $data['email'],
             'password' => Hash::make($data['password']),
-            // 'birthdate' => $data['birthdate'],
-            // 'gender' => $data['gender'],
-            // 'photo' => $data['photo'],
-            // 'telephone' => $data['telephone'],
+            'birthdate' => $data['birthdate'],
+            'gender' => $data['gender'],
+            'photo' => $data['photo'],
+            'telephone' => $data['telephone'],
         ]);
     }
     protected function update(array $data)
     {
         
     }
+ 
 }

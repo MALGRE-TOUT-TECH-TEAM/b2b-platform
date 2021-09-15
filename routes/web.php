@@ -18,9 +18,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('testing', function () {
     return view('testing');
 });
-Route::get('profile', function () {
-    return view('profile');
+
+
+Route::group(['middleware'=>'guest'], function(){
+    Route::get("rprofile", [App\Http\Controllers\RprofileController::class, 'index']);
+    Route::get("opretprofile", [App\Http\Controllers\RprofileController::class, 'index2']);
+
 });
+
+Route::group(['middleware'=>'auth'], function(){
+    Route::get("rprofile", [App\Http\Controllers\DashboardController::class, 'index']);
+    Route::get("opretprofile", [App\Http\Controllers\DashboardController::class, 'index']);
+
+});
+
+
+
+
+Route::post("firstpt", [App\Http\Controllers\RprofileController::class, 'firstpt']);
+Route::post("rcreate", [App\Http\Controllers\RprofileController::class, 'create']);
+
+
 
 Route::get('/', function () {
     return view('temp-landing-page');

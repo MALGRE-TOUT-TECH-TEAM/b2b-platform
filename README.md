@@ -8,7 +8,15 @@
 </p>
 
 ## Setup
-<p>Follow these steps PRECISELY in order to avoid errors:</p>
+<p>Before following this setup guide, make sure you have installed the following:</p>
+<ul>
+    <li>WSL (Windows Subsystem for Linux)</li>
+    <li>Docker Desktop (with enabled Ubuntu integration)</li>
+    <li>Windows Terminal (optional, but recommended)</li>
+    </ul>
+<p>From the terminal, type <code>wsl</code> to engage the linux subsystem. After this, type <code>cd ~</code> to change directory to your user account's home folder. From here you can follow the guide below. <strong>MAKE SURE TO FOLLOW THE STEPS CORRECTLY TO AVOID ERRORS!</strong></p>
+
+### Cloning and Running the Project
 <ol>
     <li><p>Clone the project to your preferred folder:</p>
         <pre>git clone https://github.com/MALGRE-TOUT-TECH-TEAM/b2b-platform.git</pre>
@@ -31,7 +39,7 @@
     </li>
     <li><p>Write the following line to copy generate a new .env file from the .env.example file:</p>
         <pre>cp .env.example .env</pre>
-        <p>This will make a copy of the .env.example file. <strong>MAKE SURE TO NOT DELETE ANY OF THEM</strong></p>
+        <p>This will make a copy of the .env.example file.</p>
         <strong>Make sure to not delete any of the .env files.</strong>
     </li>
     <li>
@@ -51,7 +59,7 @@ DB_PORT=3306
 DB_DATABASE=b2b_annonce_platform
 DB_USERNAME=sail	
 DB_PASSWORD=password</pre>
-        <p><strong>Make sure to save the file before going to next step.</strong></p>
+        <p><strong>Make sure to save the file before going to the next step.</strong></p>
     </li>
     <li><p>Run the project:</p> <pre>sail up -d</pre></li>
     <li><p>Now navigate to localhost in the browser, and generate the app encryption key, either by clicking the button or writing:</p>
@@ -106,10 +114,13 @@ sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> agai
 ### Scaffolding
 <p>Create a new model class with the name "ModelName". Can be appended with -mfsc to generate a corresponding migration, factory, seeder and controller class:</p>
 <pre>sail artisan make:model ModelName -mfsc | --all</pre>
+
 <p>Create a new controller class with the name "TestController". All controller classes have to be suffixed with "Controller".</p>
-<pre>sail artisan make:controller TestController</pre> 
+<pre>sail artisan make:controller TestController</pre> <p>Use the --resource flag to make a controller with CRUD functions.</p>
+
 <p>Create a new migration class named "create_test_table". Migrations are used to generate database tables.</p>
 <pre>sail artisan make:migration create_test_table</pre>
+
 <p>Create a new seeder class named "DataSeeder". Seeder classes are used to populate the database with data. For example, we are using a seeder to auto generate dummy data.</p>
 <pre>sail artisan make:seeder DataSeeder</pre>
 
@@ -118,6 +129,19 @@ sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> agai
 <pre>sail composer require Laravel/ui</pre>
 <p>In our project, we have used to the library to generate an authentication page with logic:</p>
 <pre>sail artisan ui:auth</pre>
+
+## Useful Links
+<ul>
+    <li>
+        <a href="https://laravel.com/docs/8.x/blade">Blade</a>
+    </li>
+    <li>
+        <a href="https://laravel.com/docs/8.x/migrations#available-column-types">Database Migrations Column Types</a>
+    </li>
+    <li>
+        <a href="https://laravel.com/docs/7.x/eloquent">Eloquent - Database Queries From Model Class</a>
+    </li>
+</ul>
 
 ## About Laravel
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
