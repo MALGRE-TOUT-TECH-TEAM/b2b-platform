@@ -19,6 +19,9 @@ body{
 .bg-pink{
     background-color:var(--pink);
 }
+.bg-dark-gradient{
+    background:linear-gradient(var(--black), rgba(48, 48, 48, 0.24))
+}
 .box-shadow{
     box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.1) inset;
 }
@@ -50,3 +53,14 @@ body{
 }
 
 /** Sidebar END **/
+
+/** Stat Box **/
+.stat-box{
+    min-width:22%; /* to overcome a bootstrap size limitation */
+    min-height:100px;
+}
+.stat-box h4{
+    font-size:1rem;
+    font-weight: 600;
+}
+/** Stat Box END **/

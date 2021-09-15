@@ -74,14 +74,12 @@
                         </li>
                     </ul>
                 </header>
-                <div class="row">
                     <main class="min-vh-75">
                         <section id="content">
                             @yield('content')
                         </section>
                     </main>
                     <footer class="container d-flex justify-content-center">Copyright Malgré Tout 2021-2021</footer>
-                </div>
             </div> <!-- Content Wrapper End -->
         </div>
     </div> <!-- The Big Wrapper END -->
