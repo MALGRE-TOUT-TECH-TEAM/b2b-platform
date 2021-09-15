@@ -132,6 +132,7 @@ sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> agai
 <pre>sail artisan ui:auth</pre>
 <p>Downloading bootstrap:</p>
 <pre>sail artisan ui:bootstrap</pre>
+<p>Finish by running <code>npm run dev</code> two times, to install the css and js file. 
 
 ## Useful Links
 <ul>
