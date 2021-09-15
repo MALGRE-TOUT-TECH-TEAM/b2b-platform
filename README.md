@@ -66,6 +66,7 @@ DB_PASSWORD=password</pre>
     <pre>sail artisan key:generate</pre>
 </li>
     <li><p>Lastly, migrate database tables into your databse by writing: <pre>sail artisan migrate</pre></p></li>
+    <li><p>You can now access the view by going to https://localhost. You can also enable hot reload by running <code>sail npm run watch-poll</code> in the terminal. This will publish port 3000, which makes it accessible on <a href="https://localhost:3000">https://localhost:3000.</a></p></li>
 </ol>
 
 ## Troubleshooting
