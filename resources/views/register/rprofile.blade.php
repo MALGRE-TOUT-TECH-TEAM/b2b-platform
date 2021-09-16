@@ -121,19 +121,16 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                    <div class="row">
-                            <label for="password">{{ __('PASSWORD') }}</label>
-                            <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password"  value="{{session('password')}}" required autocomplete="password" autofocus>
+                    <div class="row kode-input-box">
+                            <label for="password">{{ __('KODE') }}</label>
+                            <input id="password" type="password" class="@error('password') is-invalid @enderror" value="{{session('password')}}" readonly name="password" required autocomplete="current-password">
                             @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
                             @enderror
-                        </div>
-                        
-                    </div>
-                </div>
-                
+                     </div>
+                </div>    
                 <div class="row">
                     <div class="col-md-6">
                         <button class="profile-btn">Næste</button>

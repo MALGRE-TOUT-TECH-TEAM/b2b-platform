@@ -21,22 +21,17 @@ Route::get('testing', function () {
 });
 
 
-// Route::group(['middleware'=>'guest'], function(){
-    Route::get("rprofile", [App\Http\Controllers\RprofileController::class, 'index']);
-    Route::get("opretprofile", [App\Http\Controllers\RprofileController::class, 'index2']);
-    Route::get("login", [App\Http\Controllers\LoginController::class, 'index']);
-    Route::get("logmein", [App\Http\Controllers\LoginController::class, 'clogin']);
-    // Route::get("login", [App\Http\Controllers\LoginController::class, 'index']);
 
-// });
-
-// Route::group(['middleware'=>'auth'], function(){
-//     Route::get("rprofile", [App\Http\Controllers\HomeController::class, 'index']);
-//     Route::get("opretprofile", [App\Http\Controllers\HomeController::class, 'index']);
-
-// });
+Route::get("login", [App\Http\Controllers\LoginController::class, 'index']);
+Route::get("opretprofile", [App\Http\Controllers\RprofileController::class, 'index2']);
+Route::get("rprofile", [App\Http\Controllers\RprofileController::class, 'index']);
+Route::get("rcategory", [App\Http\Controllers\U2CController::class, 'index']);
 
 
+
+
+
+Route::get("logmein", [App\Http\Controllers\LoginController::class, 'clogin']);
 Route::post("rcreate", [App\Http\Controllers\RprofileController::class, 'create']);
 
 

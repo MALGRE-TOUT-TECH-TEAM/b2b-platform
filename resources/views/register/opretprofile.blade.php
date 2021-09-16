@@ -4,7 +4,6 @@
 @endsection
 @section('content')
 
-
 <div class="login-container">
     <div class="login-box ">
         <form method="POST" action="firstpt">
