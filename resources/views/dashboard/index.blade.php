@@ -4,34 +4,33 @@
 <section class="row bg-pink justify-content-around pb-4" id="visitor-analytics">
     <h1 class="text-light">Dashboard </h1>
     <div>malgretout.dk (bar)</div>
-    <div class="col-lg-3 stat-box bg-light rounded box-shadow">
-        <h3 class="">Besøgende sidste syv dage</h3>
+    {{-- <div class="row justify-content-around align-items-start pb-2"> --}}
+    <div class="col-lg-3 bg-light rounded box-shadow">
+        <h4 class="">Besøgende sidste syv dage</h4>
     </div>
-    <div class="col-lg-3 stat-box bg-light rounded box-shadow">
-        <h3>Besøgende lige nu</h3>
+    <div class="col-lg-3 bg-light rounded box-shadow">
+        <h4>Besøgende lige nu</h4>
     </div>
-    <div class="col-lg-5 stat-box bg-light rounded box-shadow">
-        <h3>Besøgende sidste måned</h3>
+    <div class="col-lg-5 bg-light rounded box-shadow">
+        <h4>Besøgende sidste måned</h4>
         Lang graf
     </div>
+    {{-- </div> --}}
 </section>
 
 <section class="row justify-content-around pt-4">
     <h2>Winthers Rideudstyr</h2>
         <div class="col-lg-2 stat-box rounded box-shadow mt-3">
-            <h3>Aktive annoncer</h3>
+            <h4>Aktive annoncer</h4>
         </div>
         <div class="col-lg-2 stat-box rounded box-shadow mt-3">
-            <h3> Visninger i alt<h3>
+            <h4> Visninger i alt<h4>
         </div>
         <div class="col-lg-2 stat-box rounded box-shadow mt-3">
-            <h3>Klik i alt</h3>
+            <h4>Klik i alt</h4>
         </div>
         <div class="col-lg-2 stat-box rounded box-shadow bg-dark-gradient mt-3">
             <h4 class="text-light">Administrer dine annoncer</h4>
         </div>
-</section>
-<section>
-
 </section>
 @endsection
