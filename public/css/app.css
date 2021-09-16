@@ -17,6 +17,9 @@ body{
 .rounded{
     border-radius: 0.5rem!important;
 }
+.row{
+    --bs-gutter-x:3rem;
+}
 /** Bootstrap Overrides END **/
 
 /** Text & Background **/
@@ -65,9 +68,11 @@ body{
 .stat-box{
     min-width:22%; /* to overcome a bootstrap size limitation */
     min-height:100px;
+    margin-bottom: 0.5rem;
 }
 .stat-box h3{
     font-size:1rem;
     font-weight: 600;
+    margin:0.5rem;
 }
 /** Stat Box END **/
