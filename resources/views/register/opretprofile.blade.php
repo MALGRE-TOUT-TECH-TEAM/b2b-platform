@@ -3,7 +3,6 @@
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 @endsection
 @section('content')
-
 <div class="login-container">
     <div class="login-box ">
         <form method="POST" action="firstpt">
@@ -11,7 +10,7 @@
             <div class="login-register">
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-3 login-col "><a  href="login">{{ __('LOG IND') }}</a></div>
+                        <div class="col-md-3 login-col "><a  href="{{ route('login') }}">{{ __('LOG IND') }}</a></div>
                         <div class="col-md-9 opret-col"><a style="font-weight: 700" href="opretprofile">{{ __('OPRET KONTO') }}</a></div>
                     </div>
                     <div class="row login-form">
