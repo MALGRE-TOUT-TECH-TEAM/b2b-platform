@@ -2,8 +2,15 @@
 
 @section('content')
 <section class="row bg-pink justify-content-around pb-4" id="visitor-analytics">
-    <h1 class="text-light">Dashboard </h1>
-    <div>malgretout.dk (bar)</div>
+    <header class="row align-items-center">
+        <h1 class="col-xl-2 col-lg-3 col-md-5 col-sm-4 text-light">Dashboard </h1>
+        <div class="col-xl-2 col-lg-3 col-md-5 col-sm-4  ms-lg-5 ms-sm-2">
+           <select id="site-selector" class="custom-select bg-light btn rounded-pill">
+               <option value="malgretoutdk" selected>malgretoutdk</option>
+               <option value="malgretoutmedia">malgretoutmedia</option>
+           </select>
+        </div>
+    </header>
     <div class="col-lg-3 stat-box bg-light rounded box-shadow">
         <h3 class="">Besøgende sidste syv dage</h3>
     </div>
@@ -31,7 +38,19 @@
             <h4 class="text-light">Administrer dine annoncer</h4>
         </div>
 </section>
-<section>
-
+<section class="row justify-content-center">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="col-md-3 justify-content-start">Visninger over tid</h3>
+            <div class="col-xl-2 col-lg-3 col-md-5 col-sm-4  ms-lg-5 ms-sm-2">
+                <select id="visits-over-time-date-range" class="custom-select bg-light btn rounded-pill">
+                    <option value="june" selected>june</option>
+                    <option value="july">july</option>
+                    <option value="august" selected>june</option>
+                </select>
+             </div>
+        </div>
+       
+    </div>
 </section>
 @endsection

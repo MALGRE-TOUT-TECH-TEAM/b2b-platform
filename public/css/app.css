@@ -12,6 +12,13 @@ body{
     margin:0;
     padding:0;
 }
+
+/** Bootstrap Overrides **/
+.rounded{
+    border-radius: 0.5rem!important;
+}
+/** Bootstrap Overrides END **/
+
 /** Text & Background **/
 .text-pink{
     color:var(--pink);
