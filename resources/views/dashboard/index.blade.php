@@ -33,29 +33,39 @@
     <!-- 4 boxes in the middle row -->
     <div class="row justify-content-between pb-3">
         <div class="col-lg-2 stat-box rounded box-shadow">
-            <h3>Aktive annoncer</h3>
-            <div>"progress-bar"</div>
-            <a href="">Administrer annoncer -></a>
+            <div class="row h-100 justify-content-center">
+                <h3>Aktive annoncer</h3>
+                <div class="col-md-11 box-shadow rounded text-center p-1">"progress-bar"</div>
+                <a href="" class="col-md-12 align-self-end text-dark">Administrer annoncer -></a>
+            </div>
         </div>
         <div class="col-lg-2 stat-box rounded box-shadow">
             <h3>Visninger i alt</h3>
-            <p class="fs-1 fw-bold">107.039</p>
+            <div class="row h-100">
+                <p class="fs-1 fw-bold">107.039</p>
+            </div>
         </div>
         <div class="col-lg-2 stat-box rounded box-shadow">
             <h3>Klik i alt</h3>
-            <p class="fs-1 fw-bold">68.512</p>
+            <div class="row h-100">
+                <p class="fs-1 fw-bold">68.512</p>
+            </div>
         </div>
         <div class="col-lg-2 stat-box rounded box-shadow bg-dark-gradient">
-            <h3 class="text-light">Administrer dine annoncer</h3>
+            <div class="row h-100 justify-content-center pb-3">
+                <h3 class="text-light col-md-8">Administrer dine annoncer</h3>
+                <p class="text-muted col-md-8 text-center">Gå til annonceadministrator og ret eller opret nye annoncer </p>
+                <a class="col-md-8 text-center" href="" class="text-light">Administrer -></a>
+            </div>
         </div>
-    </div>
+    </div> <!-- 4 boxes in the middle row END -->
     <!-- "Visninger over tid" row -->
     <div class="row justify-content-around">
         <div class="col-sm-12 stat-box box-shadow rounded">
             <header class="row">
                 <h3 class="col-3">Visninger over tid</h3>
-                <div class="col-3 ms-auto">
-                    <select id="visits-over-time-date-range" class="custom-select bg-light box-shadow btn rounded-pill mt-2">
+                <div class="col-2 ms-auto">
+                    <select id="visits-over-time-date-range" class="custom-select bg-light box-shadow btn rounded-pill w-100 mt-2">
                         <option value="june" selected>June</option>
                         <option value="july">July</option>
                         <option value="august">August</option>
@@ -68,7 +78,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </div> <!--  "Visninger over tid" row END -->
+</section> <!-- Advertiser's banner stats section END -->
 
 @endsection
