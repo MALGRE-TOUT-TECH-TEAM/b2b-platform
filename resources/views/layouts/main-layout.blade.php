@@ -22,30 +22,30 @@
                             <img class="mw-100" src="{{ asset('media-assets/wide-malgre-tout-logo.png') }}" alt="Malgré Tout logo">
                         </a>
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link {{ (request()->is('dashboard')) ? 'active' : '' }}">Dashboard</a>
+                            <a href="/dashboard" class="nav-link {{ (request()->is('dashboard')) ? 'active' : '' }}"><i class="fas fa-align-left"></i> Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/advertisements" class="nav-link {{ (request()->is('advertisements*')) ? 'active' : '' }}">Annoncer</a>
+                            <a href="/advertisements" class="nav-link {{ (request()->is('advertisements*')) ? 'active' : '' }}"><i class="fas fa-newspaper"></i> Annoncer</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/campaigns" class="nav-link {{ (request()->is('campaigns*')) ? 'active' : '' }}">Kampagner</a>
+                            <a href="/campaigns" class="nav-link {{ (request()->is('campaigns*')) ? 'active' : '' }}"><i class="fas fa-scroll"></i> Kampagner</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/profile" class="nav-link {{ (request()->is('profile*')) ? 'active' : '' }}">Profil</a>
+                            <a href="/profile" class="nav-link {{ (request()->is('profile*')) ? 'active' : '' }}"><i class="far fa-user"></i> Profil</a>
                         </li>
                         <hr> <!-- Horizontal rule -->
                         <li class="nav-item">
-                            <a href="/videos" class="nav-link {{ (request()->is('videos*')) ? 'active' : '' }}">Videoer<sub class="text-pink">kommer snart</sub></a>
+                            <a href="/videos" class="nav-link {{ (request()->is('videos*')) ? 'active' : '' }}"><i class="fas fa-play"></i> Videoer<sub class="text-pink">kommer snart</sub></a>
                         </li>
                         <li class="nav-item">
-                            <a href="/addons" class="nav-link {{ (request()->is('addons*')) ? 'active' : '' }}">Addons</a>
+                            <a href="/addons" class="nav-link {{ (request()->is('addons*')) ? 'active' : '' }}"><i class="far fa-image"></i> Addons</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#ring" class="nav-link">+45 7027 4300</a>
+                            <a href="#ring" class="nav-link"><i class="fas fa-mobile-alt"></i> +45 7027 4300</a>
                         </li>
                         <hr> <!-- Horizontal rule -->
                         <li class="mt-5 nav-item">
-                            <a href="#logout" class="nav-link"><i class="fas fa-mobile-alt"></i> Log ud</a>
+                            <a href="#logout" class="nav-link"><i class="fas fa-sign-out-alt"></i> Log ud</a>
                         </li>
                     </ul>
 
@@ -74,14 +74,12 @@
                         </li>
                     </ul>
                 </header>
-                <div class="row">
                     <main class="min-vh-75">
                         <section id="content">
                             @yield('content')
                         </section>
                     </main>
                     <footer class="container d-flex justify-content-center">Copyright Malgré Tout 2021-2021</footer>
-                </div>
             </div> <!-- Content Wrapper End -->
         </div>
     </div> <!-- The Big Wrapper END -->
