@@ -17,9 +17,9 @@ body{
 .rounded{
     border-radius: 0.5rem!important;
 }
-.row{
+/* .row{ // seemed to cause an overflow
     --bs-gutter-x:3rem;
-}
+} */
 /** Bootstrap Overrides END **/
 
 /** Text & Background **/

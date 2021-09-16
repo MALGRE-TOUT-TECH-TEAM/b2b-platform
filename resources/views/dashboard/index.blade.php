@@ -46,19 +46,26 @@
             <p class="fs-1 fw-bold">68.512</p>
         </div>
         <div class="col-lg-2 stat-box rounded box-shadow bg-dark-gradient">
-            <h4 class="text-light">Administrer dine annoncer</h4>
+            <h3 class="text-light">Administrer dine annoncer</h3>
         </div>
     </div>
     <!-- "Visninger over tid" row -->
     <div class="row justify-content-around">
         <div class="col-sm-12 stat-box box-shadow rounded">
-            <h3 class="col-md-3 justify-content-start">Visninger over tid</h3>
-            <div class="col-xl-2 col-lg-3 col-md-5 col-sm-4  ms-lg-5 ms-sm-2">
-                <select id="visits-over-time-date-range" class="custom-select bg-light btn rounded-pill">
-                    <option value="june" selected>June</option>
-                    <option value="july">July</option>
-                    <option value="august">August</option>
-                </select>
+            <header class="row">
+                <h3 class="col-3">Visninger over tid</h3>
+                <div class="col-3 ms-auto">
+                    <select id="visits-over-time-date-range" class="custom-select bg-light box-shadow btn rounded-pill mt-2">
+                        <option value="june" selected>June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                    </select>
+                </div>
+            </header>
+            <div class="row">
+                <div class="col-12">
+                    Da BIG ol' badie graph mon
+                </div>
             </div>
         </div>
     </div>
