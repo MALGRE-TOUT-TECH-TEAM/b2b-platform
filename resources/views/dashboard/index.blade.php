@@ -14,13 +14,14 @@
     <div class="row justify-content-between">
         <div class="col-lg-3 stat-box bg-light rounded box-shadow">
             <h3 class="">Besøgende sidste syv dage</h3>
+            Vertical bar graph her.
         </div>
         <div class="col-lg-3 stat-box bg-light rounded box-shadow">
             <h3>Besøgende lige nu</h3>
         </div>
         <div class="col-lg-5 stat-box bg-light rounded box-shadow">
             <h3>Besøgende sidste måned</h3>
-            Lang graf
+            Line graph skal være her.
         </div>
     </div>
 </section>
@@ -74,11 +75,16 @@
             </header>
             <div class="row">
                 <div class="col-12">
-                    Da BIG ol' badie graph mon
+                    Da BIG ol' badie line graph mon
+                    <canvas id="visits-over-time-line-chart" width="400" height="400">
+                    </canvas>
                 </div>
             </div>
         </div>
     </div> <!--  "Visninger over tid" row END -->
 </section> <!-- Advertiser's banner stats section END -->
-
+@endsection
+@section('scripts')
+      <!-- Charts.js 3.5.1-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endsection
