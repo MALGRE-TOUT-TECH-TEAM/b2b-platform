@@ -96,7 +96,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
-    // Visists over time line chart script
+    // Visits over time line chart script
     let canvas = document.getElementById('visits-over-time-line-chart');
     var myChart = new Chart(canvas, {
         type: 'line',
