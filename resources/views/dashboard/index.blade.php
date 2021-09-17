@@ -59,7 +59,8 @@
         <div class="col-lg-2 stat-box rounded box-shadow bg-dark-gradient">
             <div class="row h-100 justify-content-center pb-3">
                 <h3 class="text-light col-md-8">Administrer dine annoncer</h3>
-                <p class="text-muted col-md-8 text-center">Gå til annonceadministrator og ret eller opret nye annoncer </p>
+                <p class="text-muted col-md-8 text-center">Gå til annonceadministrator og ret eller opret nye annoncer
+                </p>
                 <a class="col-md-8 text-center" href="" class="text-light">Administrer -></a>
             </div>
         </div>
@@ -70,7 +71,8 @@
             <header class="row">
                 <h3 class="col-3">Visninger over tid</h3>
                 <div class="col-2 ms-auto">
-                    <select id="visits-over-time-date-range" class="custom-select bg-light box-shadow btn rounded-pill w-100 mt-2">
+                    <select id="visits-over-time-date-range"
+                        class="custom-select bg-light box-shadow btn rounded-pill w-100 mt-2">
                         <option value="june" selected>June</option>
                         <option value="july">July</option>
                         <option value="august">August</option>
@@ -79,7 +81,7 @@
             </header>
             <div class="row">
                 <div class="col-12">
-                    <canvas id="visits-over-time-line-chart" height="400" style="border:1px solid black">
+                    <canvas id="visits-over-time-line-chart" height="400">
                     </canvas>
                 </div>
             </div>
@@ -88,10 +90,35 @@
 </section> <!-- Advertiser's banner stats section END -->
 @endsection
 @section('scripts')
+<!-- Charts.js 3.5.1-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+    integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
     // Visists over time line chart script
+    let canvas = document.getElementById('visits-over-time-line-chart');
+    var myChart = new Chart(canvas, {
+        type: 'line',
+        data: {
+            // labels: ['19. juni', '20 juni', '21 juni', '22. juni', '23 juni', '24 juni'],
+            datasets: [{
+                label: '',
+                data: [
+                    {x:'19. juni', y:2053},
+                    {x:'20. juni', y: 1446},
+                    {x:'21. juni', y: 6003},
+                    {x:'22. juni', y: 788},
+                    {x:'23. juni', y: 9572},
+                    {x:'24. juni', y: 7322},
+                ],
+                fill:true,
+                borderColor:'rgba(255, 0, 0, 0.5)',
+                backgroundColor:'rgba(255, 0, 0, 0.2)',
+            }]
+        }
+    });
 
 </script>
-<!-- Charts.js 3.5.1-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 @endsection
