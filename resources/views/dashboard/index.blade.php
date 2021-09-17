@@ -41,14 +41,18 @@
             </div>
         </div>
         <div class="col-lg-2 stat-box rounded box-shadow">
-            <h3>Visninger i alt</h3>
             <div class="row h-100">
-                <p class="fs-1 fw-bold">107.039</p>
+                <h3>Visninger i alt</h3>
+                <div class="fs-1 fw-bold col-8">107.039
+                </div>
+                <div class="rounded bg-dark-gradient col-3">
+                    <span class="text-light">eye</span>
+                </div>
             </div>
         </div>
         <div class="col-lg-2 stat-box rounded box-shadow">
-            <h3>Klik i alt</h3>
             <div class="row h-100">
+                <h3>Klik i alt</h3>
                 <p class="fs-1 fw-bold">68.512</p>
             </div>
         </div>
@@ -75,8 +79,7 @@
             </header>
             <div class="row">
                 <div class="col-12">
-                    Da BIG ol' badie line graph mon
-                    <canvas id="visits-over-time-line-chart" width="400" height="400">
+                    <canvas id="visits-over-time-line-chart" height="400" style="border:1px solid black">
                     </canvas>
                 </div>
             </div>
@@ -85,6 +88,10 @@
 </section> <!-- Advertiser's banner stats section END -->
 @endsection
 @section('scripts')
-      <!-- Charts.js 3.5.1-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    // Visists over time line chart script
+
+</script>
+<!-- Charts.js 3.5.1-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endsection
