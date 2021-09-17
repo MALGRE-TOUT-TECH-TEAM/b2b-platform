@@ -20,6 +20,9 @@ Route::get('testing', function () {
     return view('testing');
 });
 
+//Generate PDF Routes
+Route::get('pdf', [App\Http\Controllers\PdfController::class, 'showUsers']);
+Route::get('user/pdf', [App\Http\Controllers\PdfController::class, 'createPDF']);
 
 
 Route::get("login", [App\Http\Controllers\LoginController::class, 'index']);

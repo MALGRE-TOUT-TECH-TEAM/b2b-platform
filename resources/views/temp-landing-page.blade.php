@@ -16,6 +16,7 @@
         <nav>
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="dashboard">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="pdf">Generate PDF</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Nothing</a></li>
             </ul>
         </nav>
