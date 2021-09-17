@@ -43,7 +43,7 @@ class RprofileController extends Controller
     protected function create(Request $data)
     {
         $user = User::create([
-             'firstname' => $data['firstname'],
+            'firstname' => $data['firstname'],
             'surname' => $data['surname'],
             'email'=> $data['email'],
             'password' => Hash::make($data['password']),

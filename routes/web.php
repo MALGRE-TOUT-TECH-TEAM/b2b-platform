@@ -25,7 +25,7 @@ Route::get('testing', function () {
 Route::get("login", [App\Http\Controllers\LoginController::class, 'index']);
 Route::get("opretprofile", [App\Http\Controllers\RprofileController::class, 'index2']);
 Route::get("rprofile", [App\Http\Controllers\RprofileController::class, 'index']);
-Route::get("rcategory", [App\Http\Controllers\U2CController::class, 'index']);
+Route::get("rcategory", [App\Http\Controllers\U2CController::class, 'get']);
 
 
 
@@ -33,7 +33,7 @@ Route::get("rcategory", [App\Http\Controllers\U2CController::class, 'index']);
 
 Route::get("logmein", [App\Http\Controllers\LoginController::class, 'clogin']);
 Route::post("rcreate", [App\Http\Controllers\RprofileController::class, 'create']);
-
+Route::post("ccreate", [App\Http\Controllers\U2CController::class, 'create']);
 
 Route::post("firstpt", [App\Http\Controllers\RprofileController::class, 'firstpt']);
 

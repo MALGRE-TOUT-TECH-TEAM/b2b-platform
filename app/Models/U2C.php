@@ -11,4 +11,6 @@ class U2C extends Model
         "user_id",
         "category_id",
     ];
+
+    
 }
