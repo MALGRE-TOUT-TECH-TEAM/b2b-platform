@@ -47,7 +47,7 @@
                         </li>
                         <hr> <!-- Horizontal rule -->
                         <li class="mt-5 nav-item">
-                            <a href="#logout" class="nav-link"><i class="fas fa-sign-out-alt"></i> Log ud</a>
+                            <a href="{{ route('logout') }}" class="nav-link"><i class="fas fa-sign-out-alt"></i> Log ud</a>
                         </li>
                     </ul>
 

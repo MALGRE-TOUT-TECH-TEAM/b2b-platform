@@ -94,9 +94,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
     integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 <script>
     // Visits over time line chart script
+    // Chart.defaults.scale.gridLines.display = false;
     let canvas = document.getElementById('visits-over-time-line-chart');
     var myChart = new Chart(canvas, {
         type: 'line',
@@ -105,7 +105,7 @@
             datasets: [{
                 label: '',
                 data: [
-                    {x:'19. juni', y:2053},
+                    {x:'19. juni', y: 2053},
                     {x:'20. juni', y: 1446},
                     {x:'21. juni', y: 6003},
                     {x:'22. juni', y: 788},
@@ -116,6 +116,15 @@
                 borderColor:'rgba(255, 0, 0, 0.5)',
                 backgroundColor:'rgba(255, 0, 0, 0.2)',
             }]
+        },
+        options:{
+            scales:{
+                yAxes:[{
+                    gridLines:{
+                        display:false
+                    }
+                }]
+            }
         }
     });
 
