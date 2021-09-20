@@ -40,11 +40,32 @@ class LoginTest extends TestCase
         // arrange 
         $user = User::factory()->create();
 
-        // act
+        // act (ignore the error)
         $response = $this->actingAs($user)->get("/login");
         $response->assertRedirect("/home");
 
         //assert
         $this->assertAuthenticatedAs($user);
+    }
+
+    // will be updated, when more validation is added.
+    public function testCantLoginWithInvalidCredentials()
+    {
+        // arrange 
+        $user = User::factory()->create();
+
+        // act
+        $response = $this->post("/login", [
+            "email" => $user->email,
+            "password" => "invalidpassword"
+        ]);
+
+        // assert
+        $response->assertStatus(302);
+        $response->assertSessionHas("errors");
+
+        $messages = session("errors")->getMessages();
+        $this->assertEquals($messages["email"][0], "These credentials do not match our records.");
+        // dd($messages);
     }
 }
