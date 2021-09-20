@@ -69,7 +69,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#profil" class="nav-link">
-                                <img src="#profile-picture.jpg" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 50)" />
+                                <img src="{{ asset('media-assets/Tina-Bjerre.png') }}" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 50)" />
                                 <span class="fw-bold">Tina Bjerre </span>
                                 <span class="text-light">Annoncør</span>
                             </a>
