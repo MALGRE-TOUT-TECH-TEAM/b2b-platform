@@ -34,6 +34,7 @@ Route::get("raudience", [App\Http\Controllers\U2AController::class, 'get']);
 
 
 Route::get("logmein", [App\Http\Controllers\LoginController::class, 'clogin']);
+Route::post("logout", [App\Http\Controllers\LoginController::class, 'logout']);
 Route::post("rcreate", [App\Http\Controllers\RprofileController::class, 'create']);
 Route::post("ccreate", [App\Http\Controllers\U2CController::class, 'create']);
 Route::post("acreate", [App\Http\Controllers\U2AController::class, 'create']);

@@ -28,7 +28,7 @@ class LoginController extends Controller
         return redirect("/opretprofile")->withSuccess('Login details are not valid');
     }
 
-    public function signOut() {
+    public function logout() {
         Session::flush();
         Auth::logout();
   
