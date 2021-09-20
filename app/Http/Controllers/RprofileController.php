@@ -31,9 +31,15 @@ class RprofileController extends Controller
 
     function firstpt(Request $request)
     {
-        $data = $request->input();
-        $request->session()->put('email', $data['email']);
-        $request->session()->put('password', $data['password']);
+        // $data = $request->input();
+        // $validated = $request->validated();
+        // dd($validated);
+        $request->validate([
+            "email" => "bail|required|email|unique:users,email|min:5|max:191",
+            "password" => "required|min:8",
+        ]);
+        $request->session()->put('email', $request->input('email'));
+        $request->session()->put('password', $request->input('password'));
 
         return redirect('/rprofile');
     }
@@ -53,8 +59,7 @@ class RprofileController extends Controller
 
         $validatedUser = $data->validated();
         $user = User::create($validatedUser);
-        if (Auth::attempt($user)) {
-            return redirect('/rcategory');
-        }
+        dd($user);
+        return redirect('/rcategory');
     }
 }
