@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // This class is used to call all the seeders. When adding a new seeder, add it inside the square brackets. 
-        $this->call([UserSeeder::class, AdvertisementSeeder::class, CategorySeeder::class]);
+        $this->call([UserSeeder::class, AdvertisementSeeder::class, CategorySeeder::class, AudienceSeeder::class]);
         
     }
 }

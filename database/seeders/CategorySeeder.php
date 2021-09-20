@@ -20,8 +20,8 @@ class CategorySeeder extends Seeder
             'status'=> 'publish',        
         ]);
         Categories::create([
-            'eng_name' => 'Foder og tilskud',
-            'dan_name' => 'Feed and supplements',
+            'eng_name' => 'Feed and supplements',
+            'dan_name' => 'Foder og tilskud',
             'status'=> 'publish',        
         ]);
         

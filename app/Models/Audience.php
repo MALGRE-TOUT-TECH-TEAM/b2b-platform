@@ -4,12 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Auth;
 
-class Categories extends Model
+class Audience extends Model
 {
-    use HasFactory;
-    
     protected $fillable = [
         "eng_name",
         "dan_name",
@@ -17,6 +14,6 @@ class Categories extends Model
     ];
 
     public function users(){
-        return $this->belongsToMany(User::class, 'user_category_maps');    
+        return $this->belongsToMany(User::class, 'user_audience_maps');    
     }
 }

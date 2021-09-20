@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -51,6 +52,10 @@ class User extends Authenticatable
     ];
 
     public function categories(){
-        return $this->belongsToMany(Categories::class, 'user_category_maps','user_id','category_id');
+        return $this->belongsToMany(Categories::class, 'user_category_maps','category_id','user_id');    
+    }
+
+    public function audiences(){
+        return $this->belongsToMany(Audience::class, 'user_audience_maps','audience_id','user_id');
     }
 }
