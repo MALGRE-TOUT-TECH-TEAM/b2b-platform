@@ -67,7 +67,7 @@
                         <li class="nav-item">
                             <a href="#language" class="nav-link">
                                 <img src="{{ asset('media-assets/flag-dk-36x36.jpg') }}" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 30)" />
-                                Sprogvalg
+                                Sprogvalg <img src="#dropdown-toggle" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 20)"/>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -75,6 +75,7 @@
                                 <img src="{{ asset('media-assets/Tina-Bjerre.png') }}" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 50)" />
                                 <span class="fw-bold">Tina Bjerre </span>
                                 <span class="text-light">Annoncør</span>
+                                <img src="#dropdown-toggle" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 20)"/>
                             </a>
                         </li>
                     </ul>
