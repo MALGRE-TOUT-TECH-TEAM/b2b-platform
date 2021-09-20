@@ -37,7 +37,7 @@
     composer install --ignore-platform-reqs
 </pre>
     </li>
-    <li><p>Write the following line to copy generate a new .env file from the .env.example file:</p>
+    <li><p>Write the following line to generate a new .env file copied from the .env.example file:</p>
         <pre>cp .env.example .env</pre>
         <p>This will make a copy of the .env.example file.</p>
         <strong>Make sure to not delete any of the .env files.</strong>
