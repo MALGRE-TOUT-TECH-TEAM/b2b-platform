@@ -13,7 +13,7 @@ class CreateUser extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -30,8 +30,8 @@ class CreateUser extends FormRequest
             'password' => "required|min:8|max:50",
             'birthdate' => "required|date|before:today",
             'gender' => "required",
-            'photo' => "",
-            'telephone' => "",
+            'photo' => "required",
+            'telephone' => "required",
         ];
     }
 }

@@ -44,22 +44,29 @@ class RprofileController extends Controller
         return redirect('/rprofile');
     }
 
-    protected function create(CreateUser $data)
+    protected function create(Request $data)
     {
-        // $user = User::create([
-        //     'firstname' => $data['firstname'],
-        //     'surname' => $data['surname'],
-        //     'email' => $data['email'],
-        //     'password' => Hash::make($data['password']),
-        //     'birthdate' => $data['birthdate'],
-        //     'gender' => $data['gender'],
-        //     'photo' => $data['photo'],
-        //     'telephone' => $data['telephone'],
-        // ]);
+        $data->validate([
+            "firstname" => "required|min:2",
+            "surname" => "required",
+            "birthdate" => "required|date|before:today",
+            "gender" => "required",
+            "photo" => "required",
+            "telephone" => "required",
+        ]);
 
-        $validatedUser = $data->validated();
-        $user = User::create($validatedUser);
-        dd($user);
+        $user = User::create([
+            'firstname' => $data['firstname'],
+            'surname' => $data['surname'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'birthdate' => $data['birthdate'],
+            'gender' => $data['gender'],
+            'photo' => $data['photo'],
+            'telephone' => $data['telephone'],
+        ]);
+
+        Auth::login($user);
         return redirect('/rcategory');
     }
 }
