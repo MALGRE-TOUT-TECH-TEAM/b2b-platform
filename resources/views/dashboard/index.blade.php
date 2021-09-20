@@ -36,7 +36,10 @@
         <div class="col-lg-2 stat-box rounded box-shadow">
             <div class="row h-100 justify-content-center">
                 <h3>Aktive annoncer</h3>
-                <div class="col-md-11 box-shadow rounded text-center p-1">"progress-bar"</div>
+                <div class="col-md-11 progress box-shadow rounded h-25 p-0">
+                    <div class="progress-bar bg-pink" style="width: 60%">
+                    </div>
+                </div>
                 <a href="" class="col-md-12 align-self-end text-dark">Administrer annoncer -></a>
             </div>
         </div>
@@ -57,11 +60,11 @@
             </div>
         </div>
         <div class="col-lg-2 stat-box rounded box-shadow bg-dark-gradient">
-            <div class="row h-100 justify-content-center pb-3">
-                <h3 class="text-light col-md-8">Administrer dine annoncer</h3>
-                <p class="text-muted col-md-8 text-center">Gå til annonceadministrator og ret eller opret nye annoncer
+            <div class="row h-100 justify-content-center pb-3 text-center">
+                <h3 class="text-light col-lg-9">Administrer dine annoncer</h3>
+                <p class="text-muted col-lg-9">Gå til annonceadministrator og ret eller opret nye annoncer
                 </p>
-                <a class="col-md-8 text-center" href="" class="text-light">Administrer -></a>
+                <a class="col-md-8" href="" class="text-light">Administrer -></a>
             </div>
         </div>
     </div> <!-- 4 boxes in the middle row END -->

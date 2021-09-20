@@ -74,7 +74,7 @@
                             <a href="#profil" class="nav-link">
                                 <img src="{{ asset('media-assets/Tina-Bjerre.png') }}" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 50)" />
                                 <span class="fw-bold">Tina Bjerre </span>
-                                <span class="text-light">Annoncør</span>
+                                <span class="text-muted">Annoncør</span>
                                 <img src="#dropdown-toggle" class="rounded-circle" onerror="insertPlaceholderImage.call(this, 20)"/>
                             </a>
                         </li>
