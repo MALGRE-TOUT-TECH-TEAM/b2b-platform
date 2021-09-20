@@ -24,15 +24,7 @@
                             </span>
                             @enderror
                         </div>
-                        <div class="row kode-input-box">
-                            <label for="password">{{ __('KODE') }}</label>
-                            <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                            @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                            @enderror
-                        </div>
+                        
 
                         <div class="row accept-box"> 
                             <div class="col-md-1 round column-checkbox">
