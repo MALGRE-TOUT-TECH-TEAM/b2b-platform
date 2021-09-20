@@ -5,17 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-use Illuminate\Foundation\Http\FormRequest;
-
-class U2C extends Model
+class U2A extends Model
 {
     public $timestamps = false;
-    protected $table = "user_category_maps";
+    protected $table = "user_audience_maps";
     protected $fillable = [
         "user_id",
-        "category_id",
+        "audience_id",
     ];
-
-
-    
 }
