@@ -21,6 +21,7 @@
         <div class="col-lg-3 stat-box bg-light rounded box-shadow">
             <h3>Besøgende lige nu</h3>
             <p>Få vist hvor mange besøgende der er lige nu</p>
+            <img src="{{ asset('media-assets/people-icon-85x85.png') }}" />
         </div>
         <div class="col-lg-5 stat-box bg-light rounded box-shadow">
             <h3>Besøgende sidste måned</h3>
@@ -81,7 +82,7 @@
                 <div class="col-lg-8 col-md-12"><span class="fs-2 fw-bold align-items-center">68.512 </span> </div>
                 <!-- This number should be data from analytics -->
                 <div class="col-lg-4 col md 12">
-                    <img src="{{ asset('media-assets/hand-icon.png') }}" class="mw-100" />
+                    <img src="{{ asset('media-assets/hand-icon-85x85.png') }}" class="mw-100" />
                 </div>
             </div>
             <div class="row">
