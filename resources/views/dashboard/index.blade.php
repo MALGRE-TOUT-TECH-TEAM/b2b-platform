@@ -164,8 +164,7 @@
                     {x:'I går', y: 9572},
                     {x:'I dag', y: 7322},
                 ],
-                borderColor:'rgba(255, 0, 0, 0.5)',
-                backgroundColor:'rgba(255, 0, 0, 0.2)',
+                backgroundColor:'rgba(0, 0, 0, 1)',
             }]
         },
         options:{
