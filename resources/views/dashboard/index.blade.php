@@ -18,7 +18,7 @@
         <!-- Box 1 -->
         <div class="col-lg-3 stat-box bg-light rounded box-shadow">
             <h3 class="">Besøgende sidste syv dage</h3>
-            <canvas id="visitors-last-seven-days-chart" class="design-helper-box">
+            <canvas id="visitors-last-seven-days-chart">
             </canvas>
         </div>
         <!-- Box 2 -->
@@ -38,7 +38,7 @@
         <!-- Box 3-->
         <div class="col-lg-5 stat-box bg-light rounded box-shadow">
             <h3>Besøgende sidste måned</h3>
-            <canvas id="visitors-last-month-chart" class="design-helper-box">
+            <canvas id="visitors-this-month-chart">
             </canvas>
         </div>
     </div>
@@ -61,7 +61,7 @@
                     <div class="progress-bar bg-pink" style="width: 60%">
                     </div>
                 </div>
-                <a href="" class="col-md-12 align-self-end text-dark">Administrer annoncer -></a>
+                <a href="" class="col-md-12 align-self-end text-dark fw-bold">Administrer annoncer <i class="fas fa-long-arrow-alt-right"></i></a>
             </div>
         </div>
         <!-- Box 2 -->
@@ -110,9 +110,10 @@
         <div class="col-lg-2 stat-box rounded box-shadow bg-dark-gradient">
             <div class="row h-100 justify-content-center pb-3 text-center">
                 <h3 class="text-light col-lg-9">Administrer dine annoncer</h3>
-                <p class="text-muted col-lg-9">Gå til annonceadministrator og ret eller opret nye annoncer
+                <p class="text-gray col-lg-9">
+                    Gå til annonceadministrator og ret eller opret nye annoncer
                 </p>
-                <a class="col-md-8" href="" class="text-light">Administrer -></a>
+                <a class="col-md-8 text-light" href="">Administrer <i class="fas fa-long-arrow-alt-right"></i></a>
             </div>
         </div>
     </div> <!-- Middle box row (4 boxes) END -->
@@ -147,6 +148,10 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
+    const options = {
+
+    }
+
     // Visitors last seven days chart
     let canvasLastSeven = document.getElementById('visitors-last-seven-days-chart');
     var myChart = new Chart(canvasLastSeven, {
@@ -178,6 +183,52 @@
 </script>
 
 <script>
+    // Visitors this month chart
+    let canvasVisitorsThisMonth = document.getElementById('visitors-this-month-chart');
+    var myChart = new Chart(canvasVisitorsThisMonth, {
+        type: 'line',
+        data: {
+            // labels: ['19. juni', '20 juni', '21 juni', '22. juni', '23 juni', '24 juni'],
+            datasets: [{
+                label: '',
+                data: [
+                    {x:'9. juni', y: 2553},
+                    {x:'10. juni', y: 3053},
+                    {x:'11. juni', y: 4053},
+                    {x:'12. juni', y: 3053},
+                    {x:'13. juni', y: 6053},
+                    {x:'14. juni', y: 4053},
+                    {x:'15. juni', y: 4353},
+                    {x:'16. juni', y: 5053},
+                    {x:'17. juni', y: 2053},
+                    {x:'18. juni', y: 1753},
+                    {x:'19. juni', y: 2053},
+                    {x:'20. juni', y: 1446},
+                    {x:'21. juni', y: 6003},
+                    {x:'22. juni', y: 788},
+                    {x:'23. juni', y: 9572},
+                    {x:'24. juni', y: 7322},
+                ],
+                fill:true,
+                borderColor:'rgba(219, 134, 121, 1)',
+                backgroundColor:'rgba(219, 134, 121, 0.5)',
+            }]
+        },
+        options:{
+            scales:{
+                yAxes:[{
+                    gridLines:{
+                        display:false
+                    }
+                }]
+            }
+        }
+    });
+
+</script>
+
+
+<script>
     // Visits over time line chart script
     // Chart.defaults.scale.gridLines.display = false;
     let canvasVisitorsOverTime = document.getElementById('visits-over-time-line-chart');
@@ -196,8 +247,8 @@
                     {x:'24. juni', y: 7322},
                 ],
                 fill:true,
-                borderColor:'rgba(255, 0, 0, 0.5)',
-                backgroundColor:'rgba(255, 0, 0, 0.2)',
+                borderColor:'rgba(219, 134, 121, 1)',
+                backgroundColor:'rgba(219, 134, 121, 0.5)',
             }]
         },
         options:{
