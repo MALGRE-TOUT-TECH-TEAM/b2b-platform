@@ -31,7 +31,7 @@
                     <p>Få vist hvor mange besøgende der er på siden lige nu</p>
                 </div>
                 <div class="col-lg-4">
-                    <img src="{{ asset('media-assets/people-icon-85x85.png') }}" />
+                    <img class="mw-100" src="{{ asset('media-assets/people-icon-85x85.png') }}" />
                 </div>
             </div>
         </div>
@@ -61,7 +61,8 @@
                     <div class="progress-bar bg-pink" style="width: 60%">
                     </div>
                 </div>
-                <a href="" class="col-md-12 align-self-end text-dark fw-bold">Administrer annoncer <i class="fas fa-long-arrow-alt-right"></i></a>
+                <a href="" class="col-md-12 align-self-end text-dark fw-bold">Administrer annoncer <i
+                        class="fas fa-long-arrow-alt-right"></i></a>
             </div>
         </div>
         <!-- Box 2 -->
@@ -148,9 +149,10 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
-    const options = {
+     Chart.defaults.scales.yAxes.gridLines = false;
+</script>
 
-    }
+<script>
 
     // Visitors last seven days chart
     let canvasLastSeven = document.getElementById('visitors-last-seven-days-chart');
@@ -230,7 +232,6 @@
 
 <script>
     // Visits over time line chart script
-    // Chart.defaults.scale.gridLines.display = false;
     let canvasVisitorsOverTime = document.getElementById('visits-over-time-line-chart');
     var myChart = new Chart(canvasVisitorsOverTime, {
         type: 'line',
