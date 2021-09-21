@@ -10,11 +10,12 @@ use Illuminate\Support\Facades\Auth;
 
 class U2CController extends Controller
 {
-    public function get()
+    public function index()
     {
-        $categories = Categories::all();
-        return view('register.category', compact('categories'));
+        $types = Categories::all();
+        return view('register.category')->with('categories', $types);
     }
+  
     public function create(Request $data)
     {
         $categories = $data->get("categories");
@@ -30,16 +31,5 @@ class U2CController extends Controller
         }
 
         return redirect('/raudience');
-
-
-
-
-        // $user = User::where('id', auth()->user()->id)->get();
-
-        // $category = $data[('category')];
-
-        // $user->categories()->attach($category);
-
-        // return 'Success';
     }
 }

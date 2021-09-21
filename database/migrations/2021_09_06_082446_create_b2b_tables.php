@@ -84,6 +84,7 @@ class CreateB2bTables extends Migration
         });
         Schema::dropIfExists('advertisements');
         Schema::dropIfExists('audiences');
+        Schema::dropIfExists('subscriptions');
         Schema::dropIfExists('user_audience_maps');
         Schema::dropIfExists('categories');
         Schema::dropIfExists('user_category_maps');
