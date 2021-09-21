@@ -20,6 +20,7 @@
         </div>
         <div class="col-lg-3 stat-box bg-light rounded box-shadow">
             <h3>Besøgende lige nu</h3>
+            <p>Få vist hvor mange besøgende der er lige nu</p>
         </div>
         <div class="col-lg-5 stat-box bg-light rounded box-shadow">
             <h3>Besøgende sidste måned</h3>

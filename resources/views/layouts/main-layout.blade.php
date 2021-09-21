@@ -86,8 +86,7 @@
                             <a href="#language" class="nav-link">
                                 <img src="{{ asset('media-assets/flag-dk-36x36.jpg') }}" class="rounded-circle"
                                     onerror="insertPlaceholderImage.call(this, 30)" />
-                                Sprogvalg <img src="#dropdown-toggle" class="rounded-circle"
-                                    onerror="insertPlaceholderImage.call(this, 20)" />
+                                Sprogvalg <i class="fas fa-chevron-circle-down" data-toggle="dropdown-toggle"></i>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -96,8 +95,7 @@
                                     onerror="insertPlaceholderImage.call(this, 50)" />
                                 <span class="fw-bold">Tina Bjerre </span>
                                 <span class="text-muted">Annoncør</span>
-                                <img src="#dropdown-toggle" class="rounded-circle"
-                                    onerror="insertPlaceholderImage.call(this, 20)" />
+                                <i class="fas fa-chevron-circle-down" data-toggle="dropdown-toggle"></i>
                             </a>
                         </li>
                     </ul>
