@@ -31,7 +31,7 @@ class RprofileController extends Controller
 
     function firstpt(Request $request)
     {
-     
+
         $request->validate([
             "email" => "bail|required|email|unique:users,email|min:5|max:191",
         ]);
@@ -43,37 +43,38 @@ class RprofileController extends Controller
 
     protected function create(Request $data)
     {
-        $data->validate([
-            "email" => "bail|required|email|unique:users,email|min:5|max:191",
-            "password" => "required|min:8",
-            "firstname" => "required|min:2",
-            "surname" => "required",
-            "birthdate" => "required|date|before:today",
-            "gender" => "required",
-            "photo" => "required",
-            "telephone" => "required",
-        ],
-        [
-            "email.bail" => "",
-            "email.required" => "Du er nød til at tilføje en email",
-            "password.required" => "Du er nød til at tilføje et password",
-            "firstname.required" => "Du er nød til at tilføje et fornavn",
-            "surname.required" => "Du er nød til at tilføje et efternavn",
-            "gender.required" => "Du er nød til at tilføje et køn",
-            "photo.required" => "Du er nød til at tilføje et billede",
-            "birthdate.required" => "Du er nød til at tilføje en fødseldag",
-            "telephone.required" => "Du er nød til at tilføje et telefon-nummer",
-            "email.email" =>"Det skal være en email",
-            "email.unique:users,email" => "Din email eksitere allerede",
-            "email.min:5"=> "Email skal minimum har 5 tegn",
-            "email.max:191" => "Du har brugt for mange tegn",
-            "password.min:8" => "Dit kodeord skal har minimum 8 tegn",
-            "firstname.min:2" => "Dit fornavn skal har mindst 2 tegn",
-            "birthdate.date" => "Det skal være en dato",
-            "birthdate.before:today" => "Du kan ikke sætte en dato der ligger i fremtiden",
-            
-        ]
-    );
+        $data->validate(
+            [
+                "email" => "bail|required|email|unique:users,email|min:5|max:191",
+                "password" => "required|min:8",
+                "firstname" => "required|min:2",
+                "surname" => "required",
+                "birthdate" => "required|date|before:today",
+                "gender" => "required",
+                "photo" => "required",
+                "telephone" => "required",
+            ],
+            [
+                "email.bail" => "",
+                "email.required" => "Du er nød til at tilføje en email",
+                "password.required" => "Du er nød til at tilføje et password",
+                "firstname.required" => "Du er nød til at tilføje et fornavn",
+                "surname.required" => "Du er nød til at tilføje et efternavn",
+                "gender.required" => "Du er nød til at tilføje et køn",
+                "photo.required" => "Du er nød til at tilføje et billede",
+                "birthdate.required" => "Du er nød til at tilføje en fødseldag",
+                "telephone.required" => "Du er nød til at tilføje et telefon-nummer",
+                "email.email" => "Det skal være en email",
+                "email.unique" => "Din email eksitere allerede",
+                "email.min" => "Email skal minimum har 5 tegn",
+                "email.max" => "Du har brugt for mange tegn",
+                "password.min" => "Dit kodeord skal har minimum 8 tegn",
+                "firstname.min" => "Dit fornavn skal har mindst 2 tegn",
+                "birthdate.date" => "Det skal være en dato",
+                "birthdate.before" => "Du kan ikke sætte en dato der ligger i fremtiden",
+
+            ]
+        );
 
         $user = User::create([
             'firstname' => $data['firstname'],
