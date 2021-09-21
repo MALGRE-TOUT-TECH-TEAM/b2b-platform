@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B2B Annonce Platform</title>
+    <title> @yield('title', 'AdsManager')</title>
     <script src="https://kit.fontawesome.com/402c854aed.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap 5.1 -->

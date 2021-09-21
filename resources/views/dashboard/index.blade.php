@@ -1,5 +1,7 @@
 @extends('layouts.main-layout')
 
+@section('title') Dashboard @endsection
+
 @section('content')
 <section class="row bg-pink justify-content-around pb-4" id="visitor-analytics">
     <header class="row align-items-center justify-content-start pb-2">
@@ -78,7 +80,7 @@
                 <div class="fs-1 fw-bold align-items-center">
                     <div class="col-lg-8 col-md-12">68.512 </div> <!-- This number should be data from analytics -->
                     <div class="col-lg-4 col md 12">
-                        <img src="#hand-click">
+                        <img src="#hand-click"/>
                     </div>
                 </div>
             </div>
