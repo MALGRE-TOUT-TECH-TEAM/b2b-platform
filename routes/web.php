@@ -23,7 +23,7 @@ Route::get('testing', function () {
 
 
 Route::get("login", [App\Http\Controllers\LoginController::class, 'index']);
-Route::get("opretprofile", [App\Http\Controllers\RprofileController::class, 'index2']);
+Route::get("opretprofile", [App\Http\Controllers\RprofileController::class, 'index2'])->name("opretprofil");
 Route::get("rprofile", [App\Http\Controllers\RprofileController::class, 'index']);
 Route::get("rcategory", [App\Http\Controllers\U2CController::class, 'get']);
 Route::get("raudience", [App\Http\Controllers\U2AController::class, 'get']);

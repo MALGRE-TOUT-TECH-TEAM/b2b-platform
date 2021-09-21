@@ -1,6 +1,7 @@
 @extends('layouts.login')
 @section('assets')
     <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 @endsection
 @section('content')
 
