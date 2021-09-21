@@ -78,11 +78,10 @@
                 <h3>Klik i alt</h3>
             </div>
             <div class="row">
-                <div class="fs-1 fw-bold align-items-center">
-                    <div class="col-lg-8 col-md-12">68.512 </div> <!-- This number should be data from analytics -->
-                    <div class="col-lg-4 col md 12">
-                        <img src="#hand-click"/>
-                    </div>
+                <div class="col-lg-8 col-md-12"><span class="fs-2 fw-bold align-items-center">68.512 </span> </div>
+                <!-- This number should be data from analytics -->
+                <div class="col-lg-4 col md 12">
+                    <img src="{{ asset('media-assets/hand-icon.png') }}" class="mw-100" />
                 </div>
             </div>
             <div class="row">
@@ -157,7 +156,7 @@
         },
         options:{
             scales:{
-                xAxes:[{
+                yAxes:[{
                     gridLines:{
                         display:false
                     }
