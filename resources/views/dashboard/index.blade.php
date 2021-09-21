@@ -13,19 +13,33 @@
             </select>
         </div>
     </header>
+    <!-- Upper box row (3 boxes)-->
     <div class="row justify-content-between">
+        <!-- Box 1 -->
         <div class="col-lg-3 stat-box bg-light rounded box-shadow">
             <h3 class="">Besøgende sidste syv dage</h3>
-            Vertical bar graph her.
+            <canvas id="visitors-last-seven-days-chart" class="design-helper-box">
+            </canvas>
         </div>
+        <!-- Box 2 -->
         <div class="col-lg-3 stat-box bg-light rounded box-shadow">
-            <h3>Besøgende lige nu</h3>
-            <p>Få vist hvor mange besøgende der er lige nu</p>
-            <img src="{{ asset('media-assets/people-icon-85x85.png') }}" />
+            <div class="row">
+                <h3>Besøgende lige nu</h3>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <p>Få vist hvor mange besøgende der er på siden lige nu</p>
+                </div>
+                <div class="col-lg-4">
+                    <img src="{{ asset('media-assets/people-icon-85x85.png') }}" />
+                </div>
+            </div>
         </div>
+        <!-- Box 3-->
         <div class="col-lg-5 stat-box bg-light rounded box-shadow">
             <h3>Besøgende sidste måned</h3>
-            Line graph skal være her.
+            <canvas id="visitors-last-month-chart" class="design-helper-box">
+            </canvas>
         </div>
     </div>
 </section>
@@ -35,7 +49,7 @@
     <header class="row pb-2">
         <h2>Winthers Rideudstyr</h2>
     </header>
-    <!-- 4 boxes in the middle row -->
+    <!-- Middle box row (4 boxes) -->
     <div class="row justify-content-between pb-3">
         <!-- Box 1 -->
         <div class="col-lg-2 stat-box rounded box-shadow">
@@ -101,7 +115,7 @@
                 <a class="col-md-8" href="" class="text-light">Administrer -></a>
             </div>
         </div>
-    </div> <!-- 4 boxes in the middle row END -->
+    </div> <!-- Middle box row (4 boxes) END -->
     <!-- "Visninger over tid" row -->
     <div class="row justify-content-around">
         <div class="col-sm-12 stat-box box-shadow rounded">
