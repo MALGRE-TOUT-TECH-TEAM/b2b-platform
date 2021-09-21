@@ -33,32 +33,63 @@
     </header>
     <!-- 4 boxes in the middle row -->
     <div class="row justify-content-between pb-3">
+        <!-- Box 1 -->
         <div class="col-lg-2 stat-box rounded box-shadow">
             <div class="row h-100 justify-content-center">
                 <h3>Aktive annoncer</h3>
-                <div class="col-md-11 progress box-shadow rounded h-25 p-0">
+
+                <div class="col-md-11 progress box-shadow rounded h-25 p-0" data-toggle="tooltip" data-placement="top"
+                    title="6 ud af 10">
                     <div class="progress-bar bg-pink" style="width: 60%">
                     </div>
                 </div>
                 <a href="" class="col-md-12 align-self-end text-dark">Administrer annoncer -></a>
             </div>
         </div>
+        <!-- Box 2 -->
         <div class="col-lg-2 stat-box rounded box-shadow">
-            <div class="row h-100">
+            <div class="row">
                 <h3>Visninger i alt</h3>
-                <div class="fs-1 fw-bold col-8">107.039
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-12">
+                    <span class="fs-2 fw-bold mw-100">107.039</span> <!-- This number should be data from analytics -->
                 </div>
-                <div class="rounded bg-dark-gradient col-3">
-                    <span class="text-light">eye</span>
+                <div class="col-lg-4 justify-content-center">
+                    <div>
+                        <img src="{{ asset('media-assets/view-icon-85x85.png') }}" class="mw-100"
+                            onerror="insertImagePlaceholder.call(this, 85)">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 position-relative">
+                    <span class="text-danger">Index 80</span> | Du har færre visninger
+                    <img src="{{ asset('media-assets/ios-information-outline-22x22.png') }}" title="Få hjælp">
                 </div>
             </div>
         </div>
+        <!-- Box 3 -->
         <div class="col-lg-2 stat-box rounded box-shadow">
-            <div class="row h-100">
+            <div class="row">
                 <h3>Klik i alt</h3>
-                <p class="fs-1 fw-bold">68.512</p>
+            </div>
+            <div class="row">
+                <div class="fs-1 fw-bold align-items-center">
+                    <div class="col-lg-8 col-md-12">68.512 </div> <!-- This number should be data from analytics -->
+                    <div class="col-lg-4 col md 12">
+                        <img src="#hand-click">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span class="text-success">Index 120</span> | Du har flere klik
+                    <img src="{{ asset('media-assets/ios-information-outline-22x22.png') }}" title="Få hjælp">
+                </div>
             </div>
         </div>
+        <!-- Box 4 -->
         <div class="col-lg-2 stat-box rounded box-shadow bg-dark-gradient">
             <div class="row h-100 justify-content-center pb-3 text-center">
                 <h3 class="text-light col-lg-9">Administrer dine annoncer</h3>
@@ -97,6 +128,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
     integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
     // Visits over time line chart script
     // Chart.defaults.scale.gridLines.display = false;
@@ -122,7 +154,7 @@
         },
         options:{
             scales:{
-                yAxes:[{
+                xAxes:[{
                     gridLines:{
                         display:false
                     }

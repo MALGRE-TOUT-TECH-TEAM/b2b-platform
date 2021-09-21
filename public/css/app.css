@@ -63,7 +63,7 @@ body{
 
 /** Stat Box **/
 .stat-box{
-    min-width:22%; /* to overcome a bootstrap size limitation */
+    min-width:23%; /* to overcome a bootstrap size limitation */
     min-height:100px;
     margin-bottom: 0.5rem;
 }
