@@ -36,7 +36,7 @@ class RprofileController extends Controller
             "email" => "bail|required|email|unique:users,email|min:5|max:191",
         ]);
         $request->session()->put('email', $request->input('email'));
-        $request->session()->put('password', $request->input('password'));
+        // $request->session()->put('password', $request->input('password'));
 
         return redirect('/rprofile');
     }
@@ -51,31 +51,29 @@ class RprofileController extends Controller
                 "surname" => "required",
                 "birthdate" => "required|date|before:today",
                 "gender" => "required",
-                "photo" => "required",
-                "telephone" => "required",
+                "telephone" => "required|min:8|max:20",
             ],
             [
-                "email.bail" => "",
-                "email.required" => "Du er nød til at tilføje en email",
                 "password.required" => "Du er nød til at tilføje et password",
+                "password.min" => "Dit kodeord skal har minimum 8 tegn",
                 "firstname.required" => "Du er nød til at tilføje et fornavn",
+                "firstname.min" => "Dit fornavn skal har mindst 2 tegn",
                 "surname.required" => "Du er nød til at tilføje et efternavn",
                 "gender.required" => "Du er nød til at tilføje et køn",
                 "photo.required" => "Du er nød til at tilføje et billede",
-                "birthdate.required" => "Du er nød til at tilføje en fødseldag",
                 "telephone.required" => "Du er nød til at tilføje et telefon-nummer",
+                "telephone.min" => "Telefon nummer skal mindst være 8 tal",
+                "email.required" => "Du er nød til at tilføje en email",
                 "email.email" => "Det skal være en email",
                 "email.unique" => "Din email eksitere allerede",
                 "email.min" => "Email skal minimum har 5 tegn",
                 "email.max" => "Du har brugt for mange tegn",
-                "password.min" => "Dit kodeord skal har minimum 8 tegn",
-                "firstname.min" => "Dit fornavn skal har mindst 2 tegn",
+                "birthdate.required" => "Du er nød til at tilføje en fødseldag",
                 "birthdate.date" => "Det skal være en dato",
                 "birthdate.before" => "Du kan ikke sætte en dato der ligger i fremtiden",
 
             ]
         );
-
         $user = User::create([
             'firstname' => $data['firstname'],
             'surname' => $data['surname'],
@@ -86,7 +84,6 @@ class RprofileController extends Controller
             'photo' => $data['photo'],
             'telephone' => $data['telephone'],
         ]);
-
         Auth::login($user);
         return redirect('/rcategory');
     }
