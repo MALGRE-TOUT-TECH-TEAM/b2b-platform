@@ -147,10 +147,42 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
+    // Visitors last seven days chart
+    let canvasLastSeven = document.getElementById('visitors-last-seven-days-chart');
+    var myChart = new Chart(canvasLastSeven, {
+        type: 'bar',
+        data: {
+            // labels: ['Lør', 'Søn', 'Man', 'Tir', 'Ons', 'I går', 'I dag'],
+            datasets: [{
+                label: '',
+                data: [
+                    {x:'Lør', y: 9572},
+                    {x:'Søn', y: 2053},
+                    {x:'Man', y: 1446},
+                    {x:'Tir', y: 6003},
+                    {x:'Ons', y: 2310},
+                    {x:'I går', y: 9572},
+                    {x:'I dag', y: 7322},
+                ],
+                borderColor:'rgba(255, 0, 0, 0.5)',
+                backgroundColor:'rgba(255, 0, 0, 0.2)',
+            }]
+        },
+        options:{
+            scales: {
+                y:{
+                    beginsAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+<script>
     // Visits over time line chart script
     // Chart.defaults.scale.gridLines.display = false;
-    let canvas = document.getElementById('visits-over-time-line-chart');
-    var myChart = new Chart(canvas, {
+    let canvasVisitorsOverTime = document.getElementById('visits-over-time-line-chart');
+    var myChart = new Chart(canvasVisitorsOverTime, {
         type: 'line',
         data: {
             // labels: ['19. juni', '20 juni', '21 juni', '22. juni', '23 juni', '24 juni'],
