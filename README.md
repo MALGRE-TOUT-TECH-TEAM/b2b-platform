@@ -136,9 +136,6 @@ Here is a list of useful commands, that can or have been used in this project.
 <pre>sail composer require Laravel/ui</pre>
 <p>In our project, we have used to the library to generate an authentication page with logic:</p>
 <pre>sail artisan ui:auth</pre>
-<p>Downloading bootstrap:</p>
-<pre>sail artisan ui bootstrap</pre>
-<p>Finish by running <code>sail npm install</code> and then <code>sail npm run dev</code> two times, to install the bootstrap css and js file. 
 
 ## Useful Links
 <ul>
