@@ -13,10 +13,28 @@ class RegisterTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function testOpretProfilePageStatus200()
     {
-        $response = $this->get('/');
+        $this->get('/opretprofile')
+            ->assertStatus(200)
+            ->assertSeeText("E-MAIL");
+    }
 
-        $response->assertStatus(200);
+    public function testRegisterFormValidation()
+    {
+        $response = $this->post("/rprofile", [
+            "firstname" => "w",
+            "surname" => "ww",
+            "email" => "www@www",
+            "telephone" => "1234",
+            "cvr" => 1234,
+            "password" => 1234,
+            "birthdate" => date("22/22/2022")
+        ]);
+
+        $response->assertSessionHasErrors([
+            "firstname" => "Dit fornavn skal har mindst 2 tegn",
+            "telephone" => "Telefon nummer skal mindst være 8 tal",
+        ]);
     }
 }
