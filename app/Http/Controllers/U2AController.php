@@ -12,13 +12,13 @@ class U2AController extends Controller
     public function index()
     {
         $audiences = Audience::all();
-        return view('register.audience', compact('audiences'));
+        return view('audiences.index', compact('audiences'));
     }
     public function create(Request $data)
     {
         $audiences = $data->get("audiences");
 
-        
+
         foreach ($audiences as $id) {
 
             U2A::create([
@@ -27,6 +27,5 @@ class U2AController extends Controller
             ]);
         }
         return redirect('/dashboard');
-
     }
 }

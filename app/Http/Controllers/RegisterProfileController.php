@@ -2,34 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateUser;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
 
-class RprofileController extends Controller
+class RegisterProfileController extends Controller
 {
     // GET "frontpage" of this controller.
     public function index()
     {
         if (auth()->user()) {
-            return redirect(route('home'));
+            return redirect(route('/'));
         } else {
-            return view('register.rprofile');
-        }
-    }
-    public function index2()
-    {
-        if (auth()->user()) {
-            return redirect(route('home'));
-        } else {
-            return view('register.opretprofile');
+            return view('auth.registerprofile');
         }
     }
 
-    function firstpt(Request $request)
+
+    function saveEmail(Request $request)
     {
 
         $request->validate([
@@ -38,7 +29,7 @@ class RprofileController extends Controller
         $request->session()->put('email', $request->input('email'));
         // $request->session()->put('password', $request->input('password'));
 
-        return redirect('/rprofile');
+        return redirect('/register');
     }
 
     protected function create(Request $data)
