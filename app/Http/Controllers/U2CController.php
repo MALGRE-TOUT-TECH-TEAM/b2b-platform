@@ -19,7 +19,9 @@ class U2CController extends Controller
     public function create(Request $data)
     {
         $categories = $data->get("categories");
-
+        $data->validate([
+            "categories" => "required"
+        ]);
 
         foreach ($categories as $id) {
 

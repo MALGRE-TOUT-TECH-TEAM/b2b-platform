@@ -49,7 +49,17 @@
                     </div>
 
                 </div>
+                @if ($errors->any())
+                    <div class="my-3">
+                        <ul class="list-group">
+                            @foreach ($errors->all() as $error)
+                                <li class="list-group-item list-group-item-danger">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="row">
+
                     <div class="col-md-6">
                         <button submit="type" class="profile-btn">
                             {{ __('Næste') }}
