@@ -20,6 +20,10 @@ class RegisterTest extends TestCase
             ->assertSeeText("E-MAIL");
     }
 
+public function testOpretprofileEmailValidation() {
+    
+}
+
     public function testRegisterFormValidation()
     {
         $response = $this->post("/rprofile", [

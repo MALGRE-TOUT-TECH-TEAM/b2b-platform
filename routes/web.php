@@ -22,17 +22,21 @@ Route::get('testing', function () {
 
 
 
-Route::get("login", [App\Http\Controllers\LoginController::class, 'index']);
-Route::get("opretprofile", [App\Http\Controllers\RprofileController::class, 'index2'])->name("opretprofil");
-Route::get("rprofile", [App\Http\Controllers\RprofileController::class, 'index']);
-Route::get("rcategory", [App\Http\Controllers\U2CController::class, 'get']);
-Route::get("raudience", [App\Http\Controllers\U2AController::class, 'get']);
+Route::get("login", [App\Http\Controllers\LoginController::class, 'index'])->name("login");
 
-Route::post("rcreate", [App\Http\Controllers\RprofileController::class, 'create']);
+// Route::get("registerprofile", [App\Http\Controllers\RegisterProfileController::class, 'index2'])->name("register");
+// Route::post("registerprofile", [App\Http\Controllers\RegisterProfileController::class, 'saveEmail']);
+
+Route::get("registerprofile", [App\Http\Controllers\RegisterProfileController::class, 'index'])->name("registerprofile");
+Route::post("registerprofile", [App\Http\Controllers\RegisterProfileController::class, 'saveEmail'])->name("registerprofile");
+
+Route::get("rcategory", [App\Http\Controllers\U2CController::class, 'index']);
 Route::post("ccreate", [App\Http\Controllers\U2CController::class, 'create']);
+
+Route::get("raudience", [App\Http\Controllers\U2AController::class, 'index']);
 Route::post("acreate", [App\Http\Controllers\U2AController::class, 'create']);
 
-Route::post("firstpt", [App\Http\Controllers\RprofileController::class, 'firstpt']);
+
 
 
 Route::get('/', function () {

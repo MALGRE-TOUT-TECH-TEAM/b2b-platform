@@ -1,80 +1,93 @@
-:root{
+:root {
     --pink: #db8679;
     --black: #000000;
     --gray: #8e8e8e;
-    --white:#f5f6fa;
+    --white: #f5f6fa;
 }
 
-body{
+body {
     background: var(--white);
     background-size: cover;
     min-height: 100vh;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 /** Bootstrap Overrides **/
-.rounded{
-    border-radius: 0.5rem!important;
+.rounded {
+    border-radius: 0.5rem !important;
 }
+
 /** Bootstrap Overrides END **/
 
 /** Text & Background **/
-.text-pink{
-    color:var(--pink);
+.text-pink {
+    color: var(--pink);
 }
-.bg-pink{
-    background-color:var(--pink);
+
+.bg-pink {
+    background-color: var(--pink);
 }
-.bg-dark-gradient{
-    background: rgb(2,0,36);
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(51,51,51,1) 78%, rgba(77,77,77,1) 100%);
+
+.bg-dark-gradient {
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(51, 51, 51, 1) 78%, rgba(77, 77, 77, 1) 100%);
 }
-.box-shadow{
+
+.box-shadow {
     box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.1) inset;
 }
+
 /** Text & Background END **/
 
 /** NAV **/
-.nav-link{
-    color:var(--black);
+.nav-link {
+    color: var(--black);
 }
-.nav-link:hover{
-    color:var(--pink);
+
+.nav-link:hover {
+    color: var(--pink);
 }
-.nav-item img{
-    max-height:50px;
+
+.nav-item img {
+    max-height: 50px;
 }
 
 /** NAV END **/
 
 /** Sidebar **/
-#sidebar{
-    margin:0;
-    padding:0;
-    border-right:1px solid rgba(0, 0, 0, 0.1);
+#sidebar {
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-#sidebar .nav-link.active{
-    background-color:var(--black);
-    color:var(--white);
+
+#sidebar .nav-link.active {
+    background-color: var(--black);
+    color: var(--white);
 }
+
+
 
 /** Sidebar END **/
 
 /** Stat Box **/
-.stat-box{
-    min-width:22%; /* to overcome a bootstrap size limitation */
-    min-height:100px;
+.stat-box {
+    min-width: 22%;
+    /* to overcome a bootstrap size limitation */
+    min-height: 100px;
     margin-bottom: 0.5rem;
 }
-.stat-box h3{
-    font-size:1rem;
+
+.stat-box h3 {
+    font-size: 1rem;
     font-weight: 600;
-    margin:0.5rem;
+    margin: 0.5rem;
 }
+
 /** Stat Box END **/
 
-canvas{
-    width:100%;
-    height:400px;
+canvas {
+    width: 100%;
+    height: 400px;
 }

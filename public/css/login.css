@@ -20,6 +20,10 @@ a:hover {
     padding: 0 0 0 7px;
 }
 
+.active {
+    font-weight: 700;
+}
+
 .background-image {
     background-image: url("../media-assets/Varmblodshest-ryg-1024x683.webp");
     background-size: cover;

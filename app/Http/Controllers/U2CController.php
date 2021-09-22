@@ -13,14 +13,14 @@ class U2CController extends Controller
     public function index()
     {
         $types = Categories::all();
-        return view('register.category')->with('categories', $types);
+        return view('categories.index')->with('categories', $types);
     }
-  
+
     public function create(Request $data)
     {
         $categories = $data->get("categories");
 
-        
+
         foreach ($categories as $id) {
 
             U2C::create([

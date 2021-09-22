@@ -7,7 +7,7 @@
 
     <div class="profile-wrapper">
         <div class="profile-box">
-            <form method="POST" action="rcreate" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="profile-grid">
                     <div class="row">

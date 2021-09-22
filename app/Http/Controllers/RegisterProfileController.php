@@ -1,60 +1,40 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
+use Illuminate\Http\Request;
 use App\Models\User;
-use GuzzleHttp\Psr7\Request;
-use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Http\Client\Request as ClientRequest;
-use Illuminate\Http\Request as HttpRequest;
-use App\Http\Controllers\Auth\Input;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
-class RegisterController extends Controller
+class RegisterProfileController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Register Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles the registration of new users as well as their
-    | validation and creation. By default this controller uses a trait to
-    | provide this functionality without requiring any additional code.
-    |
-    */
-
-    use RegistersUsers;
-
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = "/rcategory";
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    // GET "frontpage" of this controller.
+    public function index()
     {
-        $this->middleware('guest');
+        if (auth()->user()) {
+            return redirect(route('/'));
+        } else {
+            return view('auth.registerprofile');
+        }
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
+
+    function saveEmail(Request $request)
     {
-        return Validator::make(
-            $data,
+
+        $request->validate([
+            "email" => "bail|required|email|unique:users,email|min:5|max:191",
+        ]);
+        $request->session()->put('email', $request->input('email'));
+        // $request->session()->put('password', $request->input('password'));
+
+        return redirect('/register');
+    }
+
+    protected function create(Request $data)
+    {
+        $data->validate(
             [
                 "email" => "bail|required|email|unique:users,email|min:5|max:191",
                 "password" => "required|min:8",
@@ -85,28 +65,17 @@ class RegisterController extends Controller
 
             ]
         );
-    }
-
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\Models\User
-     */
-    protected function create(array $data)
-    {
-        return User::create([
+        $user = User::create([
             'firstname' => $data['firstname'],
             'surname' => $data['surname'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'birthdate' => $data['birthdate'],
             'gender' => $data['gender'],
-            'photo' => $data['photo'] ?? null,
+            'photo' => $data['photo'],
             'telephone' => $data['telephone'],
         ]);
-    }
-    protected function update(array $data)
-    {
+        Auth::login($user);
+        return redirect('/rcategory');
     }
 }
