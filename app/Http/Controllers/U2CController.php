@@ -30,6 +30,6 @@ class U2CController extends Controller
             ]);
         }
 
-        return redirect('/raudience');
+        return redirect('/audiences');
     }
 }

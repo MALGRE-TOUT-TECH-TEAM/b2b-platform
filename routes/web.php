@@ -30,11 +30,11 @@ Route::get("login", [App\Http\Controllers\LoginController::class, 'index'])->nam
 Route::get("registerprofile", [App\Http\Controllers\RegisterProfileController::class, 'index'])->name("registerprofile");
 Route::post("registerprofile", [App\Http\Controllers\RegisterProfileController::class, 'saveEmail'])->name("registerprofile");
 
-Route::get("rcategory", [App\Http\Controllers\U2CController::class, 'index']);
-Route::post("ccreate", [App\Http\Controllers\U2CController::class, 'create']);
+Route::get("categories", [App\Http\Controllers\U2CController::class, 'index']);
+Route::post("categories", [App\Http\Controllers\U2CController::class, 'create']);
 
-Route::get("raudience", [App\Http\Controllers\U2AController::class, 'index']);
-Route::post("acreate", [App\Http\Controllers\U2AController::class, 'create']);
+Route::get("audiences", [App\Http\Controllers\U2AController::class, 'index']);
+Route::post("audiences", [App\Http\Controllers\U2AController::class, 'create'])->name("audiences.store");
 
 
 

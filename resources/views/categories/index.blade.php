@@ -1,11 +1,11 @@
 <div>
     <h5>MAMA MIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h5>
-    <form method="POST" action="ccreate">
-        @foreach($categories as $data)
-        @csrf
+    <form method="POST" action="/categories">
+        @foreach ($categories as $data)
+            @csrf
 
-        <label for="category">{{$data->dan_name}}</label>
-        <input type="checkbox" name="categories[]" id="category" value="{{$data->id}}">
+            <label for="category">{{ $data->dan_name }}</label>
+            <input type="checkbox" name="categories[]" id="category" value="{{ $data->id }}">
         @endforeach
 
         <div class="row">

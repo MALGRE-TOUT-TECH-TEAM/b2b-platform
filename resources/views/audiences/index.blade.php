@@ -1,11 +1,11 @@
 <div>
     <h5>PAPA MIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h5>
-    <form method="POST" action="acreate">
-        @foreach($audiences as $data)
-        @csrf
+    <form method="POST" action="audiences">
+        @foreach ($audiences as $data)
+            @csrf
 
-        <label for="audience">{{$data->dan_name}}</label>
-        <input type="checkbox" name="audiences[]" id="audience" value="{{$data->id}}">
+            <label for="audience">{{ $data->dan_name }}</label>
+            <input type="checkbox" name="audiences[]" id="audience" value="{{ $data->id }}">
         @endforeach
 
         <div class="row">
