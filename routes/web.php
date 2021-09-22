@@ -37,8 +37,6 @@ Route::get("audiences", [App\Http\Controllers\U2AController::class, 'index']);
 Route::post("audiences", [App\Http\Controllers\U2AController::class, 'create'])->name("audiences.store");
 
 
-
-
 Route::get('/', function () {
     return view('temp-landing-page');
 });

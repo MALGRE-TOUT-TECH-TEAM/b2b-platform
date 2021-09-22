@@ -24,7 +24,15 @@ body {
 .text-pink {
     color: var(--pink);
 }
-
+.text-white{
+    color: var(--white);
+}
+.text-gray{
+    color: var(--gray);
+}
+.text-black{
+    color: var(--black);
+}
 .bg-pink {
     background-color: var(--pink);
 }
@@ -73,10 +81,14 @@ body {
 
 /** Stat Box **/
 .stat-box {
-    min-width: 22%;
-    /* to overcome a bootstrap size limitation */
+    /* min-width to overcome a bootstrap size limitation */
+    min-width: 23%;
     min-height: 100px;
     margin-bottom: 0.5rem;
+}
+
+.stat-box a {
+    text-decoration: none;
 }
 
 .stat-box h3 {
@@ -87,7 +99,22 @@ body {
 
 /** Stat Box END **/
 
+/** Canvas / Chart **/
 canvas {
     width: 100%;
-    height: 400px;
+    max-height: 400px;
+}
+
+#visitors-last-seven-days-chart,
+#visitors-this-month-chart {
+    max-height: 150px;
+}
+
+/** Canvas / Chart END **/
+
+/** Miscellaneous **/
+/* This class is meant for development to see the outline of the container you're working on.
+ Should not be used for production */
+.design-helper-box {
+    border: 1px solid black;
 }
