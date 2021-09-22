@@ -23,9 +23,15 @@ class RegisterProfileController extends Controller
     function saveEmail(Request $request)
     {
 
-        $request->validate([
-            "email" => "bail|required|email|unique:users,email|min:5|max:191",
-        ]);
+        $request->validate(
+            [
+                "email" => "bail|required|email|unique:users,email|min:5|max:191",
+            ],
+            [
+                "email.unique" => "Der er allerede registreret en bruger med denne email.",
+                "email.min" => "Email skal mindst have 5 bogstaver."
+            ]
+        );
         $request->session()->put('email', $request->input('email'));
         // $request->session()->put('password', $request->input('password'));
 

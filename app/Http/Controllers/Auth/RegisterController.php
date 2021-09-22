@@ -66,7 +66,7 @@ class RegisterController extends Controller
             ],
             [
                 "password.required" => "Du er nød til at tilføje et password",
-                "password.min" => "Dit kodeord skal har minimum 8 tegn",
+                "password.min" => "Dit kodeord skal have minimum 8 tegn",
                 "firstname.required" => "Du er nød til at tilføje et fornavn",
                 "firstname.min" => "Dit fornavn skal har mindst 2 tegn",
                 "surname.required" => "Du er nød til at tilføje et efternavn",
