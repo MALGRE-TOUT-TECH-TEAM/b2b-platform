@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -49,7 +50,7 @@ class RegisterTest extends TestCase
             );
     }
 
-    public function testRegisterFormValidation()
+    public function testRegisterFormValidationFail()
     {
         $response = $this->post("/register", [
             "firstname" => "w",
@@ -67,5 +68,21 @@ class RegisterTest extends TestCase
             "birthdate" => "Du kan ikke sætte en dato der ligger i fremtiden",
             "password" => "Dit kodeord skal have minimum 8 tegn"
         ]);
+    }
+
+    public function testRegisterFormValidationValid()
+    {
+        $response = $this->post("/register", [
+            "firstname" => "www",
+            "surname" => "ww",
+            "email" => "www@www",
+            "gender" => "Mand",
+            "telephone" => "12345678",
+            "cvr" => 1234,
+            "birthdate" => now()->subYears(25),
+            "password" => 12345678,
+        ]);
+
+        $response->assertRedirect("categories");
     }
 }

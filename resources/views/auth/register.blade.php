@@ -133,7 +133,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="row kode-input-box">
+                            <div class="row">
                                 <label for="password">{{ __('KODE') }}</label>
                                 <input id="password" type="password" class="@error('password') is-invalid @enderror"
                                     value="{{ old('password') }}" name="password" required
