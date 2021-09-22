@@ -47,6 +47,7 @@ Route::get('/', function () {
 });
 
 Route::get("dashboard", [App\Http\Controllers\DashboardController::class, 'index']);
+Route::get("dashboard-testing", [App\Http\Controllers\DashboardController::class, 'googleAnalytics']);
 
 Route::get('advertisements', [App\Http\Controllers\AdvertisementsController::class, 'index']);
 
