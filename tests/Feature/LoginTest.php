@@ -22,17 +22,20 @@ class LoginTest extends TestCase
     public function testLoginFunctionality()
     {
         // arrange 
-        $user = User::factory()->create();
+        $user = User::factory()->create([
+            "email" => "johnnyjuice@john",
+            "password" => bcrypt("fedefiskivand")
+        ]);
 
         // act
-        $response = $this->post("/login", [
+        $response = $this->from("/login")->post("/login", [
             "email" => $user->email,
-            "password" => $user->password
+            "password" => "fedefiskivand"
         ]);
 
         // assert
-        $response->assertRedirect("/");
-        $response->assertDontSeeText("Login");
+        $response->assertRedirect("dashboard");
+        $this->assertAuthenticatedAs($user);
     }
 
     public function testLoggedInUserIsRedirectedFromLoginPage()
