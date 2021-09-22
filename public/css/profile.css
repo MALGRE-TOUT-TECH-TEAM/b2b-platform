@@ -79,7 +79,6 @@ label{
     font-size: larger;
     border:none;
 }
-
 .profile-btn:hover{
     background: rgb(250,174,161);
     background: linear-gradient(0deg, rgba(250,174,161,1) 0%, rgba(246,187,176,1) 100%);
@@ -88,8 +87,6 @@ label{
     background: rgb(255,201,192);
     background: linear-gradient(0deg, rgb(114, 89, 84) 0%, rgba(255,220,214,1) 100%);
 }
-
-
 .profile-image-box img{
 
     background-position: center;
@@ -131,4 +128,85 @@ label{
 .file-text{
     padding:5px;
     text-align: start;
+}
+.progress-box{
+    text-align:end;
+}
+.category-info-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));;
+    
+}
+.cat-inner{
+    display:grid;
+    grid-template-columns: 1fr 7fr;
+}
+.cat-header-text{
+    color:white;
+    font-weight: 300;
+}
+.info-icon-box{
+    padding:0;
+    text-align:center;
+}
+.cat-icon{
+    color:white;
+    font-size: 1.5em;
+}
+.info-title{
+    padding:0;
+}
+.info-title h6{
+    margin-top:2px;
+    font-weight: 600;
+    color:White;
+}
+.info-title p{
+    font-weight: 200;
+    font-size: 0.85rem;
+}
+
+.categories-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.hidden{
+    opacity:0;
+    position:absolute;
+    left:-9999px
+}
+.category-button{
+    padding:5px;
+
+}
+.category-label{
+    border: 1px solid rgb(194, 194, 194);
+    border-radius:20px;
+    font-size:0.9rem;
+    padding:7px 0;   
+    display: block;
+    text-align:center;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+}
+.category-label:hover{
+
+    opacity:0.6;
+}
+.category-button input:checked + .category-label{
+    background: white;
+    color:black;
+}
+@media screen and (max-width: 850px) {
+    .categories-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+} 
+@media screen and (max-width: 400px) {
+    .categories-grid{
+        grid-template-columns: 1fr;
+    }
 }
