@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class U2C extends UuidModel
+class U2C extends Model
 {
 
     public $timestamps = false;
