@@ -18,9 +18,9 @@
 
 @isset($simpleArray)
     Simple Array
-    @foreach($item as $key => $value)
+    {{-- @foreach($item as $key => $value)
         
-    @endforeach
+    @endforeach --}}
 @endisset
 
 @if(isset($analyticsData))
