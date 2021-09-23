@@ -22,9 +22,15 @@ class DashboardController extends Controller
             'Third' => '3rd'
         ];
         $simpleArray = [1, 2, 3, 4];
+        $nestedArray = [
+            'dates' => ['1st of January', '2nd of January', '3rd of January', '4th of January', '5th of January', '6th of January', '7th of January'],
+            'visitors' => [2523, 5000, 3655, 3214, 2443, 3461, 1577],
+            'page' => ['/dashboard', '/login', '/almightyAbovesHouse', '/over9000', '/suspiciousMammal', '/analytics', '/krom']
+        ];
         return view('testing')
             ->with('analyticsData', $analyticsData)
             ->with('myArray', $myArray)
-            ->with('simpleArray', $simpleArray);
+            ->with('simpleArray', $simpleArray)
+            ->with('nestedArray', $nestedArray);
     }
 }
