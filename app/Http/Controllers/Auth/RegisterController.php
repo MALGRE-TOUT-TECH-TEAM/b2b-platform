@@ -114,13 +114,13 @@ class RegisterController extends Controller
             'totalusers' => User::all()->count(),
         );
 
-        Mail::send('welcome_email', $email_data, function($message) use ($email_data){
+        Mail::send('welcome-email', $email_data, function($message) use ($email_data){
             $message->to($email_data['email'], $email_data['name'])
             ->subject('Welcome to B2B-Platform')
             ->from('no-reply@myemail.com', 'B2B-platform');
         });
 
-        Mail::send('newuser_email', $email_data, function($message) use ($email_data){
+        Mail::send('new-user-email', $email_data, function($message) use ($email_data){
             $message->to('bencurovic@gmail.com')
             ->subject('NEW USER!!!!')
             ->from('no-reply@myemail.com', 'B2B-platform');
