@@ -79,7 +79,6 @@ $nestedArray = [
             </tr>
         @endforeach
     </table>
-
 </div>
 @endif
 @endsection
