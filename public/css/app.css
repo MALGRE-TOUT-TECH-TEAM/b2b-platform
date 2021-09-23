@@ -17,6 +17,7 @@ body {
 .rounded {
     border-radius: 0.5rem !important;
 }
+
 /** Bootstrap Overrides END **/
 
 /** Text & Background **/
@@ -73,6 +74,8 @@ body {
     background-color: var(--black);
     color: var(--white);
 }
+
+
 
 /** Sidebar END **/
 

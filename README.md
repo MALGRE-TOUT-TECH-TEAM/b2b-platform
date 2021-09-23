@@ -37,7 +37,7 @@
     composer install --ignore-platform-reqs
 </pre>
     </li>
-    <li><p>Write the following line to copy generate a new .env file from the .env.example file:</p>
+    <li><p>Write the following line to generate a new .env file copied from the .env.example file:</p>
         <pre>cp .env.example .env</pre>
         <p>This will make a copy of the .env.example file.</p>
         <strong>Make sure to not delete any of the .env files.</strong>
@@ -66,6 +66,10 @@ DB_PASSWORD=password</pre>
     <pre>sail artisan key:generate</pre>
 </li>
     <li><p>Lastly, migrate database tables into your databse by writing: <pre>sail artisan migrate</pre></p></li>
+    <li><p>You can now access the view by going to https://localhost. You can also enable hot reload by running <code>sail npm run watch-poll</code> in the terminal. This will publish port 3000, which makes it accessible on <a href="https://localhost:3000">https://localhost:3000.</a></p></li>
+    <li><p>Seed the database:</p>
+    <pre>sail artisan db:seed</pre>
+</li>
 </ol>
 
 ## Troubleshooting
@@ -86,6 +90,11 @@ sail artisan cache:clear</pre>
     </li>
 </ol>
 
+### Hard Resetting Database
+<p>If you're experiencing weird SQL errors, there might be something wrong with your database. You can easily recreate the database by running these commands sequentially:</p>
+<pre>sail artisan migrate:fresh
+sail artisan migrate:refresh</pre>
+
 ### Deleting Project
 <p>If you run into problems trying to delete the project (due to corrupted files), you can run the following command, after navigating to the folder where your project is located:</p>
 <pre>rm -rf folder_name</pre>
@@ -94,15 +103,20 @@ sail artisan cache:clear</pre>
 <p>The main branch in this repository is <strong>PROTECTED</strong>. You can only merge by making a new branch and then issuing a pull request. Pull requests has to be approved by two other code contributors.</p>
 <p>Branches should have the following naming convention:</p>
 <pre>name_of_functionality-name_of_branch_creator</pre>
+<p>When reviewing a pull requests, you should make sure of the following, before approving it:</p>
+<ol>
+    <li>Code is refactored and is as readable as possible</li>
+    <li>Appropriate tests have been written for the feature that has been implemented</li>
+    <li>The feature is working as intended on your local environment</li>
+</ol>
 
 ## Useful Commands
 Here is a list of useful commands, that can or have been used in this project.
 
 ### Migrations
-<pre>
-sail artisan migrate:reset //rolls back all application migrations
-sail artisan migrate:refresh //rolls back all migrations and execute the migrate command. Its like recreating your entire database.
-sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> again</pre>
+<p><code>sail artisan migrate:reset</code> rolls back all application migrations</p>
+<p><code>sail artisan migrate:fresh</code> drops all tables and execute <em>migrate</em> again</p>
+<p><code>sail artisan migrate:refresh</code> recreates the entire database and runs migrate again.</p>
 
 ### Seeding
 <p>For generating dummy data, we are using the factory design pattern. For this, a model, seeder and factory class is required, which can be generated like this:</p>
@@ -112,17 +126,10 @@ sail artisan migrate:fresh // drops all tables and execute <em>migrate</em> agai
 <pre>sail artisan db:seed // can be appended with --class=AdvertisementSeeder if you only want to run a specific seeder</pre>
 
 ### Scaffolding
-<p>Create a new model class with the name "ModelName". Can be appended with -mfsc to generate a corresponding migration, factory, seeder and controller class:</p>
-<pre>sail artisan make:model ModelName -mfsc | --all</pre>
-
-<p>Create a new controller class with the name "TestController". All controller classes have to be suffixed with "Controller".</p>
-<pre>sail artisan make:controller TestController</pre> <p>Use the --resource flag to make a controller with CRUD functions.</p>
-
-<p>Create a new migration class named "create_test_table". Migrations are used to generate database tables.</p>
-<pre>sail artisan make:migration create_test_table</pre>
-
-<p>Create a new seeder class named "DataSeeder". Seeder classes are used to populate the database with data. For example, we are using a seeder to auto generate dummy data.</p>
-<pre>sail artisan make:seeder DataSeeder</pre>
+<p><code>sail artisan make:model ModelName</code> Creates a new model class with the name "ModelName". Can be appended with <code>-mfsc</code> to generate a corresponding migration, factory, seeder and controller class</p>
+<p><code>sail artisan make:controller TestController</code> Creates a new controller class with the name "TestController". All controller classes have to be suffixed with "Controller".</p>
+<p><code>sail artisan make:migration create_test_table</code> Creates a new migration class named "create_test_table". Migrations are used to generate database tables.</p>
+<p><code>sail artisan make:seeder DataSeeder</code> Creates a new seeder class named "DataSeeder". Seeder classes are used to populate the database with data. For example, we are using a seeder to auto generate dummy data.</p>
 
 ### UI
 <p>To generate laravel UI components, you first have to download the library:</p>
