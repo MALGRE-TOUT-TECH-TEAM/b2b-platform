@@ -53,6 +53,6 @@ Route::get('videos', [App\Http\Controllers\VideosController::class, 'index']);
 
 Route::get('addons', [App\Http\Controllers\AddonsController::class, 'index']);
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -10,8 +10,10 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Client\Request as ClientRequest;
 use Illuminate\Http\Request as HttpRequest;
 use App\Http\Controllers\Auth\Input;
+use Dflydev\DotAccessData\Data;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -95,7 +97,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'firstname' => $data['firstname'],
             'surname' => $data['surname'],
             'email' => $data['email'],
@@ -105,8 +107,26 @@ class RegisterController extends Controller
             'photo' => $data['photo'] ?? null,
             'telephone' => $data['telephone'],
         ]);
-    }
-    protected function update(array $data)
-    {
+
+        $email_data = array(
+            'name' => $data['firstname'],
+            'email'=> $data['email'],
+            'totalusers' => User::all()->count(),
+        );
+
+        Mail::send('welcome_email', $email_data, function($message) use ($email_data){
+            $message->to($email_data['email'], $email_data['name'])
+            ->subject('Welcome to B2B-Platform')
+            ->from('no-reply@myemail.com', 'B2B-platform');
+        });
+
+        Mail::send('newuser_email', $email_data, function($message) use ($email_data){
+            $message->to('bencurovic@gmail.com')
+            ->subject('NEW USER!!!!')
+            ->from('no-reply@myemail.com', 'B2B-platform');
+        });
+
+        return $user;
+
     }
 }
