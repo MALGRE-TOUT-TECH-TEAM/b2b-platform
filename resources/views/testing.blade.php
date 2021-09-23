@@ -2,10 +2,12 @@
 
 @section('content')
 <h1>This is the Testing Page</h1>
+{{ $analyticsData }}
 @if(isset($analyticsData))
     <h2>Google Analytics Data</h2>
     {{-- @foreach($variable as $key => $date)
-        
+
+
     @endforeach --}}
 
     {{-- return [
@@ -14,6 +16,6 @@
         'visitors' => (int) $dateRow[2],
         'pageViews' => (int) $dateRow[3],
     ]; --}}
-@endif
+ @endif
 
 @endsection

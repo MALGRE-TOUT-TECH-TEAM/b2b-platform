@@ -21,7 +21,7 @@ Route::get('testing', function () {
 });
 
 //Generate PDF Routes
-Route::get('pdf', [App\Http\Controllers\PdfController::class, 'showUsers']);
+Route::get('pdf', [App\Http\Controllers\PdfController::class, 'index']);
 Route::get('user/pdf', [App\Http\Controllers\PdfController::class, 'createPDF']);
 
 

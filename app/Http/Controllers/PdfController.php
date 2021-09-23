@@ -8,7 +8,7 @@ use App\Models\User;
 
 class PdfController extends Controller
 {
-  public function showUsers(){
+  public function index(){
     $user = User::all();
     return view('pdf.index', compact('user'));
   }
