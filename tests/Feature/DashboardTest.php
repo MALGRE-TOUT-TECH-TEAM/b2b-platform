@@ -11,33 +11,39 @@ use Illuminate\Support\Facades\Auth;
 class DashboardTest extends TestCase
 {
     use RefreshDatabase;
-   
-    public function testPageExistsAndIsAccessible()
+
+    public function testUnautherizedUserIsRedirected()
     {
-        $response = $this->get('/dashboard');
-        $response->assertSuccessful();
-    }
-    public function testUnautherizedUserIsRedirected(){
         $response = $this->get('/dashboard');
         $this->assertGuest();
         $response->assertRedirect('login');
     }
-    
-    // Test incomplete.
-    public function testAutherizedUserHasAccess(){
-        $response = $this->get('/dashboard');
-        $this->assertAuthenticated();
+
+    // Test incomplete?
+    public function testLoggedInUserHasAccess()
+    {
+        // arrange 
+        $user = User::factory()->create();
+
+        // act (ignore the error)
+        $response = $this->actingAs($user)->get("/dashboard");
+
+        //assert
+        $this->assertAuthenticatedAs($user);
         $response->assertSuccessful();
     }
-    // Test incomplete?
-    public function testShowsLoggedInUsersName(){
+    public function testShowsLoggedInUsersName()
+    {
         // arrange
-        $user = User::factory().create();
+        $user = User::factory()->create();
 
         // act
-        $response = $this->actingAs($user)->get('/dashboard');
+        $response = $this->actingAs($user)
+        ->get('/dashboard');
 
         // assert
-        $response->assertSee($user->firstName);
+        $this->assertAuthenticatedAs($user);
+        $response->assertViewIs('dashboard.index');
+        $response->assertSeeText($user->firstname); // this should fail :C
     }
 }
