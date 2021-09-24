@@ -4,6 +4,8 @@ namespace Database\Factories;
 
 use App\Models\Advertisement;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+
 
 class AdvertisementFactory extends Factory
 {
@@ -23,6 +25,7 @@ class AdvertisementFactory extends Factory
     public function definition()
     {
         return [
+            "id" => Str::uuid(),
             "title" => $this->faker->name(),
             "start_date" => $this->faker->date(),
             "end_date" => $this->faker->date(),
