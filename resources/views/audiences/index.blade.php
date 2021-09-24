@@ -1,13 +1,8 @@
 @extends('layouts.login')
 @section('assets')
-    <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Scoped link tags can go here -->
 @endsection
 @section('content')
-
     <div class="profile-wrapper">
         <div class="profile-box">
             <form method="POST" action="audiences">
@@ -36,7 +31,6 @@
                     </div>
                 </div>
                 <div class="categories-grid">
-
                     @foreach ($audiences as $data)
                         <div class="category-button">
                             <input class="hidden" type="checkbox" name="audiences[]" id="{{ $data->id }}"
@@ -61,9 +55,9 @@
                         </button>
                     </div>
                     <div class="col-md-6">
-
                     </div>
                 </div>
             </form>
         </div>
     </div>
+@endsection
