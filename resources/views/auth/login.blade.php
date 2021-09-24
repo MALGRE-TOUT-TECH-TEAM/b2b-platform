@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <div class="login-container">
-        <div class="login-box ">
+        <div class="login-box">
             <form method="POST" action="">
                 @csrf
                 <div class="login-register">
@@ -31,10 +31,8 @@
                                     </span>
                                 @enderror
                             </div>
-
                             <div class="row accept-box">
                                 <div class="col-md-1 round column-checkbox">
-
                                 </div>
                                 <div class="col-md-6 column-text">
                                     <div class="col-md-1 round column-checkbox">
@@ -54,7 +52,6 @@
                                     @endif
                                 </div>
                             </div>
-
                             <div class="row">
                                 <button submit="type" class="login-btn">
                                     {{ __('Log Ind') }}

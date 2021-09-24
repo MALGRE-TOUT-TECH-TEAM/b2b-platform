@@ -3,7 +3,6 @@
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 @endsection
 @section('content')
-
     <div class="login-container">
         <div class="login-box ">
             <form method="POST" action="{{ route('registerprofile') }}">
@@ -11,7 +10,6 @@
                 <div class="login-register">
                     <div class="col-md-12">
                         @include("auth.partials.row")
-
                         <div class="row login-form">
                             <div class="row email-input-box">
                                 <label for="email">{{ __('E-MAIL') }}</label>
@@ -23,8 +21,6 @@
                                     </span>
                                 @enderror
                             </div>
-
-
                             <div class="row accept-box">
                                 <div class="col-md-1 round column-checkbox">
                                 </div>
@@ -38,11 +34,8 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-
                                     </div>
-
-                                    <label style="font-size:15px"
-                                        for="remember">{{ __('Jeg har læst og accepterer handelsbetingelserne') }}</label>
+                                    <label style="font-size:15px" for="remember">{{ __('Jeg har læst og accepterer handelsbetingelserne') }}</label>
                                 </div>
                             </div>
                             <div class="row">
@@ -54,9 +47,6 @@
                     </div>
                 </div>
             </form>
-
-
         </div>
     </div>
-
 @endsection

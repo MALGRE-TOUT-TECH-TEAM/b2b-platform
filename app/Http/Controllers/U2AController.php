@@ -17,7 +17,9 @@ class U2AController extends Controller
     public function create(Request $data)
     {
         $audiences = $data->get("audiences");
-
+        $data->validate([
+            "audiences" => "required"
+        ]);
 
         foreach ($audiences as $id) {
 
