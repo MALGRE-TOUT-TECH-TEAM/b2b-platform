@@ -32,5 +32,9 @@ class DashboardController extends Controller
             ->with('assArray', $associativeArray)
             ->with('multidimensionalArray', $multidimensionalArray)
             ->with('analyticsData', $analyticsData);
+
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified']);
     }
 }
