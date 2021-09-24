@@ -1,11 +1,9 @@
 @extends('layouts.login')
 @section('assets')
-    <link href="{{ asset('css/profile.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <!-- Scoped link tags can go here -->
 @endsection
 @section('content')
-
-    <div class="profile-wrapper">
+    <div class="">
         <div class="profile-box">
             <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
@@ -19,16 +17,13 @@
                                 <div class="col-md-6"></div>
                                 <div class="col-md-6"></div>
                                 <img id="preview">
-                                <input id="photo" type="file" onchange="previewImage();" name="photo"
-                                    accept="image/x-png,image/jpeg,image/webp">
-
+                                <input id="photo" type="file" onchange="previewImage();" name="photo" accept="image/x-png,image/jpeg,image/webp">
                             </div>
                             <div class="row file-upload-box">
                                 <label for="photo" class="upload-btn">Upload</label>
                             </div>
                         </div>
                         <div class="col-md-6">
-
                         </div>
                         <div class="col-md-2">
                             <div class="progress-box">
@@ -152,13 +147,11 @@
                             <div class="col-md-6"></div>
                         </div>
                     </div>
+                </div>
             </form>
         </div>
     </div>
-
 @endsection
-
-
 <script>
     function previewImage() {
         var file = document.getElementById('photo').files
