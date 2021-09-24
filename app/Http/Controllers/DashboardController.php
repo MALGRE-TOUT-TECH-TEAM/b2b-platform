@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified']);
+    }
+
     // GET "frontpage" of this controller.
     public function index()
     {
@@ -32,9 +37,6 @@ class DashboardController extends Controller
             ->with('assArray', $associativeArray)
             ->with('multidimensionalArray', $multidimensionalArray)
             ->with('analyticsData', $analyticsData);
-
-    public function __construct()
-    {
-        $this->middleware(['auth', 'verified']);
     }
+   
 }
