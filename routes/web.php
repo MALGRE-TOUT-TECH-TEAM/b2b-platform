@@ -15,13 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Returns a view you can use for testing new things (will be removed at some point)
-Route::get('testing', function () {
-    return view('testing');
-});
-
-
-
 Route::get("login", [App\Http\Controllers\LoginController::class, 'index'])->name("login");
 
 // Route::get("registerprofile", [App\Http\Controllers\RegisterProfileController::class, 'index2'])->name("register");
@@ -42,6 +35,7 @@ Route::get('/', function () {
 });
 
 Route::get("dashboard", [App\Http\Controllers\DashboardController::class, 'index']);
+Route::get("testing", [App\Http\Controllers\DashboardController::class, 'googleAnalytics']);
 
 Route::get('advertisements', [App\Http\Controllers\AdvertisementsController::class, 'index']);
 
