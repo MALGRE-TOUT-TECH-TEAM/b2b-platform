@@ -37,7 +37,7 @@
         </div>
         <!-- Box 3-->
         <div class="col-lg-5 stat-box bg-light rounded box-shadow">
-            <h3>Besøgende sidste måned</h3>
+            <h3>Besøgende denne måned</h3>
             <canvas id="visitors-this-month-chart">
             </canvas>
         </div>

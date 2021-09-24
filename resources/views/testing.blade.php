@@ -39,7 +39,7 @@ $nestedArray = [
     'page' => ['/dashboard', '/login', '/almightyAbovesHouse', '/over9000', '/suspiciousMammal', '/analytics', '/krom']
 ]; --}}
 <div>
-    <h3>"Nested" Arrays</h3>
+    <h3>Multidimensional Arrays</h3>
     <table class="table">
         <tr>
             <th>Date</th>
