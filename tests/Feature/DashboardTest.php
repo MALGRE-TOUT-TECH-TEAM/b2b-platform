@@ -44,6 +44,6 @@ class DashboardTest extends TestCase
         // assert
         $this->assertAuthenticatedAs($user);
         $response->assertViewIs('dashboard.index');
-        $response->assertSeeText($user->firstname); // this should fail :C
+        $response->assertSeeText($user->firstname);
     }
 }
