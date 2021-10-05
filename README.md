@@ -70,7 +70,18 @@ DB_PASSWORD=password</pre>
     <li><p>Seed the database:</p>
     <pre>sail artisan db:seed</pre>
 </li>
+    <li>
+        Google Analytics Access:
+    <p>
+        To retrieve google analytics data you need to retrieve the service-account-credentials.json in B2B-Platform project on Asana. See the task "Google Analytics           secret" under the "Andet" column and follow the instructions.
+    </p>
+    <p>
+        https://github.com/spatie/laravel-analytics (the package used to access data)
+    </p>
+        The secret is a reference to the service-api in the Malgré Tout AdManager project here: https://console.cloud.google.com/home/dashboard?project=malgre-tout-admanager&hl=da (you shouldn't need access to it to use the google analytics api, but if you do Jonas got an invitation to become owner of the project, so he can   manage it )
+    </li>
 </ol>
+
 
 ## Troubleshooting
 <p>If get an "access denied" error while trying to migrate, you've probably accidentally used "sail up" before generating an env file. To fix this you should:</p>
